@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import {Layout} from 'antd';
+import NavMenu from './components/navbar/NavMenu';
+import Routes from './Routes';
+const {Header, Content, Footer} = Layout;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Layout>
+        <NavMenu/>
+      <Layout>
+        
+          <Content
+              style={{
+              margin: '24px 16px 0'
+          }}>
+              <div style={{
+                  padding: 24,
+                  background: '#fff',
+                  minHeight: 800
+              }}>
+                <Routes/>
+              </div>
+          </Content>
+          <Footer
+              style={{
+              textAlign: 'center'
+          }}>
+              REVISTA DIGITAL
+          </Footer>
+      </Layout>
+  </Layout>
+
     );
   }
 }
