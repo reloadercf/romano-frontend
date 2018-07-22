@@ -11,9 +11,7 @@ import 'slick-carousel/slick/slick.css';
 
 const WithRouter = () => (
     <BrowserRouter>
-    
            <App/>
-    
     </BrowserRouter>
 );
 

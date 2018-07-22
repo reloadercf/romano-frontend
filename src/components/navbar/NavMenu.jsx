@@ -6,14 +6,14 @@ class NavMenu extends Component {
     render() {
         return (
             <Sider
-                style={{background:"#222831"}}
+                style={{background:"#ffff"}}
                 breakpoint="lg"
                 collapsedWidth="0"
                 onCollapse={(collapsed, type) => {
                 console.log(collapsed, type);
             }}>
                 <div className="logo"/>
-                <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+                <Menu theme="light" mode="inline" defaultSelectedKeys={['4']}>
                     <Menu.Item key="1">
                         <Icon type="user"/>
                         <span className="nav-text">Deportes</span>

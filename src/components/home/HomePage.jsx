@@ -24,7 +24,7 @@ class HomePage extends Component {
         return (
             <div>
                 <Row type="flex" justify="center" align="center">
-                    <Col md={20} sm={20} xs={24} style={{marginBottom: "100px"}}>
+                    <Col md={24} sm={24} xs={24} style={{marginBottom: "100px"}}>
                         <Carrousel/>
                     </Col>
                 </Row>
