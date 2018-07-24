@@ -1,48 +1,13 @@
 
-  /* .carrousel{ 
-    background: #ffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    color: aliceblue;
-    
-  }
-
-  .div-gradient{
-    height: 50vh;
-    width: auto;
-    background-color: rgba(255,255,255,.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-  }
-
-  .div-gradient h1 {
-    color: white;
-    background: #222831;
-    text-align: center;
-    padding: 0.5em;
-   
-  }
-  .div-gradient h2{
-    color: aliceblue;
-    background: #222831;
-    text-align: center;
-    padding: 1em;
-
-  }
-   */
   .container
   {
     position: relative;
     height: 600px;
+    margin-top: 5em;
   }
 
   .container img{
-    width: 100%;
+    width: 80%;
     height: auto;
     opacity: 0.8;
     display: block;
@@ -54,7 +19,7 @@
   .bottomleft {
     position: absolute;
     bottom: 2em;
-    left: 100px;
+    left: 150px;
     font-size: 40px;
     color: #222831;
     background: white;

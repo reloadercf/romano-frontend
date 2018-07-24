@@ -1,7 +1,7 @@
 import React from 'react'
-import {Card, Icon} from 'antd';
+import { Icon} from 'antd';
 import {Row, Col} from 'antd';
-const {Meta} = Card;
+
 
 export const CardComponent = ({title, subtitle, imagen, description}) => {
     return (
