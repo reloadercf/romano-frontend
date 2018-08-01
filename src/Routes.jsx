@@ -6,12 +6,11 @@ import { Detail } from './components/cardDetail/Detail';
 class Routes extends React.Component{
     
     render(){
-        
+        let{noticias}=this.props       
         return(
             <Switch>
-                <Route exact path="/" component={HomePage}/>     
-                <Route exact path="/detail" component={Detail}/>    
-                
+                <Route exact path="/" render={props =>(<HomePage {...props} noticias={noticias} />)}/>      
+                <Route path="/detail/:id_noticia" render={props =>(<Detail {...props} noticias={noticias} />)}/>        
             </Switch>
         )
     }

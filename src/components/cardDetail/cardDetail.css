@@ -18,7 +18,8 @@
    }
    .card-title{
         color: '#393e46';
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 0.9;
    }
 
    .detail-img1 {
@@ -27,6 +28,20 @@
    .detail-img1 img{
      width: 100%;
      height: auto;
+   }
+
+   .info-container-card{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     
+   }
+   .info-container-card span{
+     font-size: 30px;
+     padding: 5px;
+     border-right: 5px dotted black;
+
    }
  
  
@@ -78,6 +93,14 @@
   width: 100%;
   height: auto;
 }
+
+.info-container-card span{
+  font-size: 18px;
+  padding: 3px;
+  border-right: 2px dotted rgb(136, 131, 131);
+
+}
+
 
  }  
    

@@ -1,14 +1,17 @@
 import React from 'react'
-import { Icon} from 'antd';
+
 import {Row, Col} from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
 
 
-export const CardComponent = ({title, subtitle, imagen, description}) => {
+
+export const CardComponent = ({title, subtitle, imagen_uno, descripcion_uno}) => {
     return (
         <Row className="recipe-card">
             <Col md={10} sm={24} xs={24}>
                 <div className="div-img">
-                    <img src={imagen} alt="Chai Oatmeal"/>
+                    <img src={imagen_uno} alt="Chai Oatmeal"/>
                 </div>
             </Col>
             <Col md={14} sm={24} xs={24}>
@@ -22,49 +25,22 @@ export const CardComponent = ({title, subtitle, imagen, description}) => {
                     <hr/>
 
                     <p>
-                        {description}
-                    </p>
-
-                    {/* <p className="ingredients">
-          <span>Ingredients:&nbsp;</span>Milk, salt, coriander, cardamom, cinnamon,
-          turmeric, honey, vanilla extract, regular oats, oat bran.
-        </p> */}
-
+                        {descripcion_uno}                     
+                    </p>     
                     <ul >
                         <li>
-                            <Icon
-                                type="facebook"
-                                style={{
-                                    fontSize: 20,
-                                    color: '#1A2C5B'
-                                }}
-                            
-                               />
+                            <FontAwesomeIcon icon={faTwitterSquare} size="2x"  style={{color:"#15b7b9"}}/>
                         </li>
                         <li>
-                            <Icon
-                                type="facebook"
-                                style={{
-                                fontSize: 20,
-                                color: '#1A2C5B'
-                            }}/>
+                            <FontAwesomeIcon icon={faFacebookSquare} size="2x" style={{color:"#0245a3"}}/>    
                         </li>
                         <li>
-                            <Icon
-                                type="facebook"
-                                style={{
-                                fontSize: 20,
-                                color: '#1A2C5B'
-                            }}/>
+                            <FontAwesomeIcon icon={faInstagram} size="2x" style={{color:"#f73859"}}/>    
                         </li>
                         <li>
-                            <Icon
-                                type="facebook"
-                                style={{
-                                fontSize: 20,
-                                color: '#1A2C5B'
-                            }}/>
+                            <FontAwesomeIcon icon={faWhatsappSquare} size="2x" style={{color:"#2eb872"}}/>    
                         </li>
+                     
                     </ul>
 
                 </article>

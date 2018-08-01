@@ -2,31 +2,59 @@
   .container
   {
     position: relative;
-    height: 600px;
+    width: 100%;
+    height: 500px;
     margin-top: 5em;
   }
 
   .container img{
-    width: 80%;
-    height: auto;
+    width: 100%;
+    height: 500px;
     opacity: 0.8;
     display: block;
     margin-left: auto;
     margin-right: auto;
 
   }
+  .div-gradient{
+    position: relative;
+    width: auto;
+    margin-top: 5em;
+    
+  }
+
+  
 
   .bottomleft {
     position: absolute;
-    bottom: 2em;
-    left: 150px;
-    font-size: 40px;
+    bottom: 6em;
+    font-size: 30px;
     color: #222831;
     background: white;
     padding: 0.5em;
     opacity: 0.8;
-    width: 90%;   
+    width: 70%; 
+    transition: 0.3s;  
+  
 }
+
+
+.bottomleft:hover {
+  position: absolute;
+  bottom: 6em;
+  font-size: 30px;
+  color: #f7f7f7;
+  background: rgb(26, 25, 25);
+  padding: 0.5em;
+  width: 73%; 
+  transition: 0.5s;  
+
+}
+
+
+
+
+
 
 
 @media only screen and (max-width: 980px) and (min-width: 821px) {  

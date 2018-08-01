@@ -8,20 +8,24 @@ import { CarrouselDos } from '../cardDetail/CarrouselDos';
 
 class HomePage extends Component {
     render() {
+        let{noticias}=this.props
         return (
             <div>
                             
                 <Row type="flex" justify="center" align="center">
                     <Col md={24} sm={24} xs={24} style={{marginBottom: "100px"}}>
-                        <CarrouselDos/>
-                        <Carrousel/>
+                        <CarrouselDos noticias={noticias}/>
+                        <Carrousel noticias={noticias}/>
                     </Col>
                 </Row>
 
-                <CardsPage/>             
+                <CardsPage noticias={noticias}/>   
+
+                        
             </div>
         );
     }
 }
 
 export default HomePage;
+

@@ -20,6 +20,7 @@ const styles={
 }
 export class Detail extends Component {
     render() {
+        let{noticias}=this.props
         return (
     
                 <Layout style={{background:"#ffff"}}>
@@ -28,7 +29,7 @@ export class Detail extends Component {
                     height: 'auto',
                     background: '#ffff'
                 }}>
-                <CarrouselDos/>
+                <CarrouselDos noticias={noticias} />
                 </Header>
                     <Row gutter={16}>
                         <Col lg={18} xl={18} md={18} sm={24} xs={24} style={styles.col}>                        
