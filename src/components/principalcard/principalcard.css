@@ -39,18 +39,7 @@
 }
 
 
-.bottomleft:hover {
-  position: absolute;
-  bottom: 6em;
-  font-size: 30px;
-  color: #f7f7f7;
-  background: rgb(26, 25, 25);
-  padding: 0.5em;
-  width: 73%; 
-  transition: 0.5s;  
-
-}
-
+ 
 
 
 

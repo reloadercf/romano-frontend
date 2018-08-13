@@ -133,7 +133,6 @@ class App extends Component {
           <Routes  noticias={noticias}/>
         </Content>
         <Footer>
-          
             <FooterSection/>
         </Footer>
         

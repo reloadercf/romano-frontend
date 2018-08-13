@@ -53,6 +53,7 @@ img:hover {
 .recipe-card article {
   padding: 0em 4em;
 }
+
 .recipe-card article ul {
   list-style: none;
   margin: 0.5em 0 0;
@@ -189,7 +190,7 @@ img:hover {
 /* Para 480px */  
 @media only screen and (max-width: 500px) and (min-width: 341px) 
 {
-  recipe-card img {
+  .recipe-card img {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;

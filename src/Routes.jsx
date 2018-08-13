@@ -4,6 +4,8 @@ import HomePage from './components/home/HomePage';
 import { Detail } from './components/cardDetail/Detail';
 
 class Routes extends React.Component{
+
+  
     
     render(){
         let{noticias}=this.props       
