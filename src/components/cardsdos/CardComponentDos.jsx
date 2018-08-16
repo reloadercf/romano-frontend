@@ -1,12 +1,16 @@
 import React from 'react'
+import { Card } from 'antd';
 
 export const CardComponentDos =()=>{
 
-    return(
-        
-        <div>
-            <h1>asdasd</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae inventore, maiores corrupti numquam facilis autem nemo tenetur exercitationem quo reprehenderit unde alias corporis, consequatur eum debitis ut rem nesciunt voluptates.</p>
+    return( 
+        <div className="card_component_dos" >
+            <div className="div-img">
+                <img classname="img"src="https://images.pexels.com/photos/811108/pexels-photo-811108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""/>
+            </div>   
+            <div>
+                <h1>asdasd</h1>
+            </div>
         </div>
     )
 }

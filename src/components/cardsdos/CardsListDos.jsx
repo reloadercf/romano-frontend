@@ -5,7 +5,7 @@ import {CardComponentDos} from './CardComponentDos';
 class CardsListDos extends Component {
     render() {
         return (
-            <div>
+            <div >
                  <div className="div_title_detail">
                      <h1>Mas sobre</h1>
                  </div>

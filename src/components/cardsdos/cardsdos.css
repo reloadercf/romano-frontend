@@ -10,3 +10,21 @@
 .div_title_detail h1{
     color:#ffff;
 }
+.card_component_dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 250px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding: 0;
+}
+
+.div-img {
+
+}
+
+.div-img img {
+    width: 100%;
+}
