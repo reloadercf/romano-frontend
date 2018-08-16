@@ -126,13 +126,13 @@ class App extends Component {
       <Layout>
         <NavMenu/>
       <Layout className="layout-videos">
-        <Header style={{ background: '#fff', padding: 0 }} >
+        <Header style={{ background: '#ffff', padding: 0 }} >
           <HeaderSection/>
         </Header>
         <Content style={{ margin: '24px 16px 0',  }}>
           <Routes  noticias={noticias}/>
         </Content>
-        <Footer>
+        <Footer style={{ background:'#2e2b2b', height:"40vh"}}>
             <FooterSection/>
         </Footer>
         

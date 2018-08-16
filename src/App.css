@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 @import './components/principalcard/principalcard.css';
 @import './components/cards/cards.css';
+@import './components/cardsdos/cardsdos.css';
 @import './components/cardDetail/cardDetail.css';
 
 .div-logo{
@@ -23,7 +24,11 @@
   }
   
   
-  
+  .div-footer{
+    color: #FFFF;
+    display: flex;
+    justify-content: center;
+  }
   
   @media only screen and (max-width: 980px) and (min-width: 821px) 
   {  

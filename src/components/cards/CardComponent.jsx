@@ -10,8 +10,8 @@ export const CardComponent = ({title, subtitle, imagen_uno, descripcion_uno}) =>
     return (
         <Row className="recipe-card">
             <Col md={10} sm={24} xs={24}>
-                <div className="div-img">
-                    <img src={imagen_uno} alt="Chai Oatmeal"/>
+                <div className="div-img hidden">
+                    <img className="img" src={imagen_uno} alt="Chai Oatmeal"/>
                 </div>
             </Col>
             <Col md={14} sm={24} xs={24}>

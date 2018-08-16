@@ -1,0 +1,12 @@
+.div_title_detail{
+    text-align: center;
+    padding: 10px;
+    background: #3a4750;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.div_title_detail h1{
+    color:#ffff;
+}

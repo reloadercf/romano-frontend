@@ -30,8 +30,7 @@ class Carrousel extends Component {
                         <CardCarrousel  {...c}/>              
                     </div>
                 ))} 
-               
-              
+                   
             </Slider>
         );
     }

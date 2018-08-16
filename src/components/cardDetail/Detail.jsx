@@ -3,12 +3,11 @@ import {Row, Col} from 'antd'
 import {Layout} from 'antd';
 import DetailCard from './DetailCard';
 import {CarrouselDos} from './CarrouselDos';
+import CardsListDos from '../cardsdos/CardsListDos';
 const {Header, Footer} = Layout;
 
 const styles={
     row:{
-
-
     },
     col:{
         padding: "2em"
@@ -64,12 +63,10 @@ export class Detail extends Component {
                             En esta parte ira la publicidas
                         </Col>
                     </Row>
-                    <Row gutter={16}>
-                        <Col lg={24} xl={24} md={24} sm={24} xs={24} style={styles.col}>                        
-                                 asdasdadasd               
-                        </Col>
+                    <Row gutter={24} justify={"center"} style={styles.col}>
+                        <CardsListDos/>  
                     </Row>
-                    <Footer style={{background:"#ffff"}}>Footer</Footer>
+                  
                 </Layout>
                 
      

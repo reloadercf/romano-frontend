@@ -44,7 +44,7 @@
     background: #838689;
     color:#f6f6f6;
     width: 100%; 
-    transition: 0.3s; 
+    transition: 1s; 
   }
 
   .detail_title:hover{
@@ -55,7 +55,7 @@
     background: #303841;
     color:#f6f6f6;
     width: 80%; 
-    transition: 0.5s; 
+    
   }
 
   .detail_subtitle{
