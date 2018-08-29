@@ -3,8 +3,8 @@ import './App.css';
 import {Layout} from 'antd';
 import NavMenu from './components/navbar/NavMenu';
 import Routes from './Routes';
+import { HeaderSection } from './components/header/HeaderSection';
 import { FooterSection } from './components/footer/FooterSection';
-import { NavBarDos } from './components/navbar/NavBarDos';
 
 const {Header, Content, Footer} = Layout;
 
@@ -129,22 +129,22 @@ class App extends Component {
          
 }
 
-
+º
   render() {
     let {noticias}=this.state
     return (
-
-      <Layout className="layout-videos">
-        <Header style={{background:"#ffff"}}> 
-            <NavBarDos/>
-        </Header>
-        <Content >
+       <Layout>
+       <NavMenu/>
+       <Layout className="layout-videos">
+          <HeaderSection/>
+        <Content className="content" >
           <Routes  noticias={noticias}/>
         </Content>
         <Footer style={{ background:'#2e2b2b', height:"40vh"}}>
             <FooterSection/>
         </Footer>
         
+      </Layout>
       </Layout>
     
 

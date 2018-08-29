@@ -15,10 +15,9 @@ class NavMenu extends Component {
             <Sider
                 breakpoint="lg"
                 collapsedWidth="0"
+            
                 collapsible={true}
-                onBreakpoint={(broken) => {
-                console.log(broken);
-            }}
+                //defaultCollapsed={false}
                 onCollapse={(collapsed, type) => 
             {
                 console.log(collapsed, type);
@@ -28,7 +27,7 @@ class NavMenu extends Component {
                 width:"300px",
                 position: 'fixed',
                 backgroundColor:"#ffff",
-                zIndex: 1
+                zIndex: 2
             }}>
 
                 <div className = "div-logo" > 

@@ -32,8 +32,11 @@ export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_un
 
                     <p>
                         {descripcion_uno}                     
-                    </p>     
-                    <ul >
+                    </p>  
+                    <span>Por: Autor</span>   
+
+
+                    <ul>
                         <li>
                             <FontAwesomeIcon icon={faTwitterSquare} size="2x"  style={{color:"#15b7b9"}}/>
                         </li>

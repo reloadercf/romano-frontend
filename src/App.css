@@ -5,22 +5,24 @@
 @import './components/cards/cards.css';
 @import './components/cardsdos/cardsdos.css';
 @import './components/cardDetail/cardDetail.css';
-@import './components/navbar/navbar.css';
 
-.div-logo{
+
+.div-logo-header{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     background: #FFFF;
-    height: 150px;
+    height: 18vh;
+    position: fixed;
+    z-index: 1;
 }
 
-.div-logo img{
-  width: 50%;
-  height: 150px;
-}
+.div-logo-header img{
+  width: 40%;
 
+}
 .App {
     text-align: center;
   }
@@ -36,6 +38,15 @@
     color: #FFFF;
     display: flex;
     justify-content: center;
+  }
+
+  .content{
+    margin: 24px 16px 0;
+    background: #FFFF;
+    margin-top: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+
   }
   
   @media only screen and (max-width: 980px) and (min-width: 821px) 
@@ -75,22 +86,30 @@
       width: auto;
     }
 
-    .div-logo{
+     .div-logo-header{
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       width: 100%;
       background: #FFFF;
-      height: 150px;
+      height: 15vh;
+      position: fixed;
+      z-index: 1;
   }
   
-    .div-logo img{
-    width: auto;
-    height: 150px;
+  .div-logo-header img{
+    width: 100%;
+  }
+
+  .content{
+    margin: 24px 16px 0;
+    background: #FFFF;
+    margin-top: 100px;
+    padding: 0;
   }
   
   
-   
   }  
     
   
@@ -100,6 +119,21 @@
     .layout-videos{
       margin-left: 0;
     }
+    .div-logo-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #FFFF;
+      height: 25vh;
+      position: fixed;
+      z-index: 1;
+  }
+  
+  .div-logo-header img{
+    width: 100%;
+  }
   
      
     
