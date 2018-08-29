@@ -3,7 +3,7 @@ import {Row, Col} from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
 import {Link} from 'react-router-dom';
-
+import  {FacebookShareButton,  FacebookIcon} from 'react-share'
 
 export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_uno}) => {
 
@@ -11,7 +11,7 @@ export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_un
     return (
         <Row className="recipe-card">
             <Col md={10} sm={24} xs={24}>
-            <Link to={`/detail/${slug}`}> 
+            <Link to={`detail/${slug}`}> 
             <div className="div-img hidden">
                     <img className="img" src={imagen_uno} alt="Chai Oatmeal"/>
                 </div>
@@ -37,11 +37,18 @@ export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_un
 
 
                     <ul>
-                        <li>
-                            <FontAwesomeIcon icon={faTwitterSquare} size="2x"  style={{color:"#15b7b9"}}/>
+
+                        
+                        <li>                       
+                            <FontAwesomeIcon icon={faTwitterSquare} size="2x"  style={{color:"#15b7b9"}}/>                                  
                         </li>
-                        <li>
-                            <FontAwesomeIcon icon={faFacebookSquare} size="2x" style={{color:"#0245a3"}}/>    
+                        <li >
+                            <FacebookShareButton
+                                url={"https://www.youtube.com/watch?v=43ZbaI21_IM"}
+                                quote={title}
+                                >
+                                <FontAwesomeIcon icon={faFacebookSquare} size="2x" style={{color:"#0245a3"}}/> 
+                            </FacebookShareButton>           
                         </li>
                         <li>
                             <FontAwesomeIcon icon={faInstagram} size="2x" style={{color:"#f73859"}}/>    
