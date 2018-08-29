@@ -12,6 +12,7 @@ export const CardList = ({noticias}) => {
                 {noticias.map((c, key) => (
                     <Col md={24} sm={24} xs={24} key={key}>
                         <CardComponent {...c}/>
+                      <hr/>
                     </Col>
                     
                 ))}

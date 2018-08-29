@@ -9,10 +9,16 @@
 .div-logo{
     display: flex;
     justify-content: center;
-    width: 90%;
+    align-items: center;
+    width: 100%;
     background: #FFFF;
+    height: 150px;
 }
 
+.div-logo img{
+  width: 50%;
+  height: 150px;
+}
 
 .App {
     text-align: center;
@@ -20,7 +26,7 @@
   
   
   .layout-videos{
-    margin-left: 200px;
+    background: #FFFF;
   }
   
   
@@ -62,6 +68,21 @@
     .layout-videos{
       margin-left: 0;
     }
+
+    .div-logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #FFFF;
+      height: 150px;
+  }
+  
+    .div-logo img{
+    width: auto;
+    height: 150px;
+  }
+  
   
    
   }  

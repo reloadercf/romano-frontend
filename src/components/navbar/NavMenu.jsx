@@ -15,10 +15,12 @@ class NavMenu extends Component {
             <Sider
                 breakpoint="lg"
                 collapsedWidth="0"
+                collapsible={true}
                 onBreakpoint={(broken) => {
                 console.log(broken);
             }}
-                onCollapse={(collapsed, type) => {
+                onCollapse={(collapsed, type) => 
+            {
                 console.log(collapsed, type);
             }}
                 style={{

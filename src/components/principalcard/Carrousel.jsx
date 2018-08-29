@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {CardCarrousel} from './CardCarrousel';
 import Slider from "react-slick";
+import {Link} from 'react-router-dom';
 
 class Carrousel extends Component {
 
-
+    state={
+        slug:null
+    }
     render() {
 
         const settings = {
@@ -12,25 +15,31 @@ class Carrousel extends Component {
             fade:true,
             infinite: true,
             speed: 500,
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 4000,
             cssEase: "linear",
-            pauseOnHover: true         
+            pauseOnHover: true,
+         
+           
         };
 
         let{noticias}=this.props
 
     
         return (
-            <Slider {...settings}  >
-                 {noticias.map((c, key)=>(
-                    <div key={key} >
-                        <CardCarrousel  {...c}/>              
-                    </div>
-                ))} 
-                   
+            <Slider ref={slider => (this.slider = slider)} {...settings}  >
+                 {noticias.map((c, key)=>( 
+              
+                      <CardCarrousel {...c} key={key}/>
+                  
+                ))
+                } 
+                
+
+
+
             </Slider>
         );
     }

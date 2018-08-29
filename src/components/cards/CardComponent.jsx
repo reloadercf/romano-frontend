@@ -1,18 +1,22 @@
 import React from 'react'
-
 import {Row, Col} from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
+import {Link} from 'react-router-dom';
 
 
+export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_uno}) => {
 
-export const CardComponent = ({title, subtitle, imagen_uno, descripcion_uno}) => {
+    console.log(slug)
     return (
         <Row className="recipe-card">
             <Col md={10} sm={24} xs={24}>
-                <div className="div-img hidden">
+            <Link to={`/detail/${slug}`}> 
+            <div className="div-img hidden">
                     <img className="img" src={imagen_uno} alt="Chai Oatmeal"/>
                 </div>
+            </Link>
+           
             </Col>
             <Col md={14} sm={24} xs={24}>
                 <article>
@@ -20,7 +24,9 @@ export const CardComponent = ({title, subtitle, imagen_uno, descripcion_uno}) =>
                         <span>MUSICA</span>
                         <span>27 MAYO 2018</span>
                     </div>
-                    <h2>{title}</h2>
+                    <Link to={`/detail/${slug}`}> 
+                        <h2>{title}</h2>
+                    </Link>
                     <h3>{subtitle}</h3>
                     <hr/>
 

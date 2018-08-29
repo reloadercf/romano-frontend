@@ -29,10 +29,10 @@ export class Detail extends Component {
 
     get_publicacion=()=>{
         //let{publicacion}=this.state
-        let id_publicacion=this.props.match.params.id_noticia
+        let slug_publicacion=this.props.match.params.slug_noticia
         let publicaciones=this.props.noticias
         let publicacion_detail=publicaciones.find(p => {
-            return p.id == id_publicacion;
+            return p.slug === slug_publicacion;
         })
 
         this.setState({publicacion:publicacion_detail})
