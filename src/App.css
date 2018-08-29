@@ -5,6 +5,7 @@
 @import './components/cards/cards.css';
 @import './components/cardsdos/cardsdos.css';
 @import './components/cardDetail/cardDetail.css';
+@import './components/navbar/navbar.css';
 
 .div-logo{
     display: flex;
@@ -25,9 +26,10 @@
   }
   
   
-  .layout-videos{
+.layout-videos{
     background: #FFFF;
-  }
+    width: 100%;
+}
   
   
   .div-footer{
@@ -40,6 +42,7 @@
   {  
     .layout-videos{
       margin-left: 0;
+      width: auto;
     }
   }  
     
@@ -47,6 +50,7 @@
   @media only screen and (max-width: 820px) and (min-width: 621px) {  
     .layout-videos{
       margin-left: 0;
+      width: auto;
     }
     
     
@@ -57,6 +61,7 @@
   {
     .layout-videos{
       margin-left: 0;
+      width: auto;
     }
     
   }  
@@ -67,6 +72,7 @@
   
     .layout-videos{
       margin-left: 0;
+      width: auto;
     }
 
     .div-logo{
