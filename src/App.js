@@ -6,7 +6,7 @@ import Routes from './Routes';
 import { HeaderSection } from './components/header/HeaderSection';
 import { FooterSection } from './components/footer/FooterSection';
 
-const {Header, Content, Footer} = Layout;
+const {Content, Footer} = Layout;
 
 
 class App extends Component {
@@ -129,7 +129,7 @@ class App extends Component {
          
 }
 
-º
+
   render() {
     let {noticias}=this.state
     return (
@@ -140,10 +140,9 @@ class App extends Component {
         <Content className="content" >
           <Routes  noticias={noticias}/>
         </Content>
-        <Footer style={{ background:'#2e2b2b', height:"40vh"}}>
+  
             <FooterSection/>
-        </Footer>
-        
+      
       </Layout>
       </Layout>
     

@@ -8,15 +8,15 @@ export const CardList = ({noticias}) => {
 
     return (
         <div>
-            <Row type="flex" justify="space-around" >
-                {noticias.map((c, key) => (
+            <Row type="flex" justify="space-around" >               
+                {noticias &&  noticias.length> 0? 
+                    noticias.map((c, key) => (
                     <Col md={24} sm={24} xs={24} key={key}>
                         <CardComponent {...c}/>
                       <hr/>
                     </Col>
-                    
-                ))}
-
+                )):null
+                }
             </Row>
         </div>
 

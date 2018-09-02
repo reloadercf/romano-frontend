@@ -8,8 +8,7 @@ export class CarrouselDos extends Component {
    
     render() {
        
-    
-        var settings = {
+        var settingsdos = {
             dots: true,
             infinite: false,
             speed: 500,
@@ -46,12 +45,13 @@ export class CarrouselDos extends Component {
           let{noticias}=this.props
 
         return (
-            <Slider {...settings} >
-            {noticias.map((c, key)=>(
+            <Slider {...settingsdos} >
+            {noticias &&  noticias.length> 0? 
+              noticias.map((c, key)=>(
                <div key={key} >
                    <CardCarrousel  {...c}/>              
                </div>
-           ))} 
+           )):null} 
             </Slider>
         );
     }

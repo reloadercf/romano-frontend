@@ -3,17 +3,33 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 import 'moment/locale/fr';
 import {BrowserRouter} from 'react-router-dom';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-const WithRouter = () => (
-    <BrowserRouter>
-           <App/>
-    </BrowserRouter>
-);
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux'
+import promiseMiddleware from 'redux-promise'
+import reducers from './reducers'
+import ScrollMemory from 'react-router-scroll-memory';
 
-ReactDOM.render(<WithRouter />, document.getElementById('root'));
-registerServiceWorker();
+const createStoreWithMiddleware=applyMiddleware(promiseMiddleware)(createStore)
+
+ReactDOM.render(
+
+<Provider store={createStoreWithMiddleware(reducers)}>
+   
+    <BrowserRouter >
+        <div>
+            <ScrollMemory />
+            <App/>
+        </div>
+        
+    </BrowserRouter>
+   
+</Provider>, document.getElementById('root'));
+
+
+//registerServiceWorker();

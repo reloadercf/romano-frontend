@@ -4,8 +4,9 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare} from '@fortawesome/free-brands-svg-icons'
 
 class DetailCard extends Component {
-    render() {
-        let {publicacion} = this.props
+    render() {  
+        let {noticias} = this.props
+        console.log(this.props)
         return (
             <div>
                 <Row >
@@ -13,21 +14,21 @@ class DetailCard extends Component {
                         <Row>
                             <Col md={24}>
                             <div className="container_detail_title">
-                                <h1 className="detail_title">{publicacion.title}</h1>
+                                <h1 className="detail_title">{noticias[0].titulo}</h1>
                             </div>
                                 
                             </Col>
                             <Col md={24}>
                                 <span className="detail_subtitle">
-                                    {publicacion.subtitle}
+                                    {noticias[0].textograndecuerpo}
                                 </span>
                             </Col>
                         </Row>
                         <Row>
                             <Col md={18} sm={18} xs={24}>
                             <div className="detail_autor">
-                                <span>{publicacion.autor}</span>
-                                <span>Fecha de la noticia</span>
+                                <span>{noticias[0].autor.nombre}</span>
+                                <span>{noticias[0].fechainicio}</span>
                             </div>
                                 
                             </Col>
@@ -78,22 +79,22 @@ class DetailCard extends Component {
                 </Row>
                 <Row gutter={16}>
                     <Col lg={24} md={24} className="detail-img1">
-                        <img src={publicacion.imagen_uno} alt=""/>
+                        <img src={noticias[0].publicidad1} alt=""/>
                     </Col>
                     <Col>
                        <div className="detail_descripcion_uno" >
-                           <p style={{marginTop: "1em"}}> {publicacion.descripcion_uno}</p>
+                           <p style={{marginTop: "1em"}}> {noticias[0].cuerpo}</p>
                        </div>
                                           
                     </Col>
                 </Row>
                 <Row gutter={16}>
                     <Col lg={12} md={12} sm={12} xs={24} className="detail-img2">
-                        <img src={publicacion.imagen_uno} alt=""/>
+                        <img src={noticias[0].publicidad2} alt=""/>
                     </Col>
                     <Col lg={12} md={12} sm={12} xs={24} className="detail_descripcion_dos">
                         <p>
-                            {publicacion.descripcion_uno}
+                            {noticias[0].cuerpo}
                         </p>
                  
                     </Col>             

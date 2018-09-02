@@ -5,15 +5,13 @@ import { faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare } from
 import {Link} from 'react-router-dom';
 import  {FacebookShareButton,  FacebookIcon} from 'react-share'
 
-export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_uno}) => {
-
-    console.log(slug)
+export const CardComponent = ({slug, titulo, subtitle, imagenportada, cuerpo, categoria,fechainicio,autor}) => {
     return (
         <Row className="recipe-card">
             <Col md={10} sm={24} xs={24}>
             <Link to={`detail/${slug}`}> 
             <div className="div-img hidden">
-                    <img className="img" src={imagen_uno} alt="Chai Oatmeal"/>
+                    <img className="img" src={imagenportada} alt="Chai Oatmeal"/>
                 </div>
             </Link>
            
@@ -21,19 +19,19 @@ export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_un
             <Col md={14} sm={24} xs={24}>
                 <article>
                     <div className="div-category">
-                        <span>MUSICA</span>
-                        <span>27 MAYO 2018</span>
+                        <span>{categoria.nombrecategoria}</span>
+                        <span>{fechainicio}</span>
                     </div>
                     <Link to={`/detail/${slug}`}> 
-                        <h2>{title}</h2>
+                        <h2>{titulo}</h2>
                     </Link>
                     <h3>{subtitle}</h3>
                     <hr/>
 
                     <p>
-                        {descripcion_uno}                     
+                        {cuerpo}                     
                     </p>  
-                    <span>Por: Autor</span>   
+                    <span>Por: Autor {autor.nombre}</span>   
 
 
                     <ul>
@@ -45,7 +43,7 @@ export const CardComponent = ({slug, title, subtitle, imagen_uno, descripcion_un
                         <li >
                             <FacebookShareButton
                                 url={"https://www.youtube.com/watch?v=43ZbaI21_IM"}
-                                quote={title}
+                                quote={titulo}
                                 >
                                 <FontAwesomeIcon icon={faFacebookSquare} size="2x" style={{color:"#0245a3"}}/> 
                             </FacebookShareButton>           

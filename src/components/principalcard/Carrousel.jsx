@@ -30,12 +30,13 @@ class Carrousel extends Component {
     
         return (
             <Slider ref={slider => (this.slider = slider)} {...settings}  >
-                 {noticias.map((c, key)=>( 
-              
-                      <CardCarrousel {...c} key={key}/>
-                  
+                 {noticias &&  noticias.length> 0? 
+                     noticias.map((c, key)=>( 
+                      <CardCarrousel {...c} key={key}
+                      />    
                 ))
-                } 
+                :null
+                  } 
                 
 
 

@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import {Layout, Menu, Icon} from 'antd';
 import logo from './logo.png';
+
+
+
+import {connect} from 'react-redux'
+import {categories} from '../../actions'
+import {bindActionCreators} from 'redux'
 const {Sider} = Layout;
 
 const style = {
@@ -10,7 +16,16 @@ const style = {
     }
 }
 class NavMenu extends Component {
+
+    componentWillMount(){
+        this.props.categories();
+    }
+
+  
     render() {
+
+        console.log(this.props.noticias.categoriesData)
+        let categorias=this.props.noticias.categoriesData
         return (
             <Sider
                 breakpoint="lg"
@@ -34,24 +49,28 @@ class NavMenu extends Component {
                     <img src={logo} style={style.logo} alt=""/> 
                 </div>
                 <Menu theme="light" mode="inline" defaultSelectedKeys={['4']}>
-
-                    <Menu.Item key="6">
-                        <Icon type="appstore-o"/>
-                        <span className="nav-text">Cerrar Sesion</span>
-                    </Menu.Item>
-                    <Menu.Item key="7">
-                        <Icon type="team"/>
-                        <span className="nav-text">Mis cursos</span>
-                    </Menu.Item>
-                    <Menu.Item key="8">
-                        <Icon type="shop"/>
-                        <span className="nav-text">Examenes</span>
-                    </Menu.Item>
+                    {categorias &&  categorias.length> 0? 
+                    categorias.map((c, key) => (
+                                <Menu.Item key={key}>
+                                    <Icon type="shop" />
+                                    <span className="nav-text">{c.nombrecategoria}</span>
+                                </Menu.Item>
+                    )):null
+                     }
                 </Menu>
             </Sider>
         );
     }
 }
 
-export default NavMenu;
+function mapStateToProps(state){
+    return{
+        noticias:state.noticias
+    }
+}
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({categories}, dispatch)
+   
+}
+export default connect(mapStateToProps,mapDispatchToProps)(NavMenu);
 

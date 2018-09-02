@@ -1,14 +1,14 @@
 import React from 'react'
 
-export const CardCarrousel =({id,title,imagen_dos})=>{
+export const CardCarrousel =({id,slug,titulo,imagenportada})=>{
 
     return(
    
         <div className="container-card">
-            <img src={imagen_dos} alt="imagen"/>
+            <img src={imagenportada} alt="imagen"/>
             <div className="info-container-card" >
                 <span>{id}</span>
-                <p className="card-title" >{title}</p>   
+                <p className="card-title" >{titulo}</p>   
             </div>
              
         </div>
