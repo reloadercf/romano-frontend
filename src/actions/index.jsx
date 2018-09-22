@@ -1,10 +1,10 @@
 
 import axios from 'axios'
-const URL='https://boiling-peak-31677.herokuapp.com';
+const URL='http://127.0.0.1:8000';
 
 export function noticiasListAll(){
-      const request=axios.get(`${URL}/article/articulofiltro/`)
-                            .then(response=>response.data)
+    const request=axios.get(`${URL}/article/articulofiltro/`)
+                            .then(response=>response.data.results)
     return {
         type:'GET_NOTICIAS_ALL',
         payload:request
@@ -14,7 +14,7 @@ export function noticiasListAll(){
 
 export function noticiaDetail(slug){
     const request=axios.get(`${URL}/article/articulofiltro/?slug=${slug}`)
-                          .then(response=>response.data)
+                          .then(response=>response.data.results)
   return {
       type:'GET_NOTICIA_DETAIL',
       payload:request

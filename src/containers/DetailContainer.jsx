@@ -8,6 +8,7 @@ import CardsListDos from '../components/cardsdos/CardsListDos';
 import {connect} from 'react-redux'
 import {noticiaDetail,noticiasListAll } from '../actions'
 import {bindActionCreators} from 'redux'
+import { CardComponentDos } from '../components/cardsdos/CardComponentDos';
 
 
 const {Header} = Layout;
@@ -64,7 +65,11 @@ class DetailContainer extends Component
                          {this.noticiasTemplate(this.props.noticias)}        
                         </Col>
                         <Col lg={6} xl={6} md={6} sm={24} xs={24} >                      
-                           
+                            <CardComponentDos/> 
+                            <CardComponentDos/> 
+                            <CardComponentDos/> 
+                            <CardComponentDos/>                             
+                        
                         </Col>
                     </Row>
                     <Row gutter={24} justify={"center"} style={styles.col}>
