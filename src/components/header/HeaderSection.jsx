@@ -1,14 +1,14 @@
 import React from 'react'
-import {Menu } from 'antd';
+import './header.css'
 import logo from './logo.png';
 import {Link} from 'react-router-dom' 
 
 export const HeaderSection = () => {
     return (
-       
-             <Link to='/' className="div-logo-header">
-                 <img src={logo} alt=""/> 
-             </Link>
- 
+        <Link to='/' >
+            <div className="header">
+                <img src={logo} alt="" />
+            </div>
+        </Link>
     )
 }

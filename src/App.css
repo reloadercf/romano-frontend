@@ -8,22 +8,7 @@
 @import './components/footer/Footer.css';
 
 
-.div-logo-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background: #FFFF;
-    height: 18vh;
-    position: fixed;
-    z-index: 1;
-}
 
-.div-logo-header img{
-  width: 40%;
-
-}
 .App {
     text-align: center;
   }

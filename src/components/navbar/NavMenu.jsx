@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {Layout, Menu, Icon} from 'antd';
 import logo from './logo.png';
-
-
-
+import './navbar.css'
 import {connect} from 'react-redux'
 import {categories} from '../../actions'
 import {bindActionCreators} from 'redux'
@@ -45,15 +43,15 @@ class NavMenu extends Component {
                 zIndex: 2
             }}>
 
-                <div className = "div-logo" > 
+                <div className ="div-logo" > 
                     <img src={logo} style={style.logo} alt=""/> 
                 </div>
                 <Menu theme="light" mode="inline" defaultSelectedKeys={['4']}>
                     {categorias &&  categorias.length> 0? 
                     categorias.map((c, key) => (
                                 <Menu.Item key={key}>
-                                    <Icon type="shop" />
-                                    <span className="nav-text">{c.nombrecategoria}</span>
+                                    
+                                    <span className="nav-text"><a href={`/modulo/${c.nombrecategoria}`}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> {c.nombrecategoria}</a></span>
                                 </Menu.Item>
                     )):null
                      }

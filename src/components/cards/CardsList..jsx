@@ -3,7 +3,6 @@ import {CardComponent} from './CardComponent';
 import {Row, Col} from 'antd'
 
 
-
 export const CardList = ({noticias}) => {
 
     return (
@@ -13,9 +12,10 @@ export const CardList = ({noticias}) => {
                     noticias.map((c, key) => (
                     <Col md={24} sm={24} xs={24} key={key}>
                         <CardComponent {...c}/>
-                      <hr/>
+                      <hr style={{opacity:"0.1"}}/>
                     </Col>
-                )):null
+                )):
+                <div>¡¡No hay noticias disponibles!!</div>
                 }
             </Row>
         </div>

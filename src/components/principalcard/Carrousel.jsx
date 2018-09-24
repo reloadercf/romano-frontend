@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import {CardCarrousel} from './CardCarrousel';
-import Slider from "react-slick";
+import {Icon} from 'antd'
 import {Link} from 'react-router-dom';
+
+
+//import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'nuka-carousel';
 
 class Carrousel extends Component {
 
@@ -29,19 +33,28 @@ class Carrousel extends Component {
 
     
         return (
-            <Slider ref={slider => (this.slider = slider)} {...settings}  >
-                 {noticias &&  noticias.length> 0? 
+            
+            <Carousel  speed={200} autoplay={true}   
+          
+              renderCenterLeftControls={({ previousSlide }) => (
+                <button onClick={previousSlide} style={{background:"#323232", padding:"5px"}}> <Icon type="left" theme="outlined"  style={{ fontSize: '30px', color: '#ffff' }} /> </button>
+              )}
+              renderCenterRightControls={({ nextSlide }) => (
+                <button onClick={nextSlide} style={{background:"#323232"}}><Icon type="right" theme="outlined" style={{ fontSize: '30px', color: '#ffff' }} /></button>
+              )}
+              
+              dragging={true}
+              >
+ 
+                 {noticias  &&  noticias.length> 0? 
                      noticias.map((c, key)=>( 
                       <CardCarrousel {...c} key={key}
                       />    
                 ))
                 :null
                   } 
-                
 
-
-
-            </Slider>
+            </Carousel>
         );
     }
 }
