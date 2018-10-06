@@ -4,7 +4,6 @@ import {Layout} from 'antd';
 import DetailCard from '../components/cardDetail/DetailCard'
 import {CarrouselDos} from '../components/cardDetail/CarrouselDos';
 import CardsListDos from '../components/cardsdos/CardsListDos';
-
 import {connect} from 'react-redux'
 import {noticiaDetail,noticiasListAll } from '../actions'
 import {bindActionCreators} from 'redux'
@@ -25,6 +24,8 @@ const styles={
 }
 class DetailContainer extends Component 
     {
+
+  
     componentWillMount(){
         this.props.noticiasListAll();
         this.props.noticiaDetail(this.props.match.params.slug_noticia)

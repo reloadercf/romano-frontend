@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {CardCarrousel} from './CardCarrousel';
-import Slider from "react-slick";
+import Carousel from 'nuka-carousel';
+import {Icon} from 'antd'
 
 export class CarrouselDos extends Component {
 
@@ -8,51 +9,31 @@ export class CarrouselDos extends Component {
    
     render() {
        
-        var settingsdos = {
-            dots: true,
-            infinite: false,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            initialSlide: 0,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-                  initialSlide: 2
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-            ]
-          };
+       
           let{noticias}=this.props
 
         return (
-            <Slider {...settingsdos} >
+            <Carousel speed={200} autoplay={true} slidesToShow={3} slidesToScroll={1}    dragging={true}   
+              
+            renderCenterLeftControls={({ previousSlide }) => (
+              <button onClick={previousSlide} style={{background:"#323232", padding:"5px"}}> <Icon type="left" theme="outlined"  style={{ fontSize: '15px', color: '#ffff' }} /> </button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <button onClick={nextSlide} style={{background:"#323232"}}><Icon type="right" theme="outlined" style={{ fontSize: '15px', color: '#ffff' }} /></button>
+            )}
+            
+         
+            
+            >
             {noticias &&  noticias.length> 0? 
               noticias.map((c, key)=>(
                <div key={key} >
                    <CardCarrousel  {...c}/>              
                </div>
            )):null} 
-            </Slider>
+
+
+            </Carousel>
         );
     }
 }

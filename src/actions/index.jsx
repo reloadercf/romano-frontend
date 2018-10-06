@@ -1,6 +1,6 @@
 
 import axios from 'axios'
-const URL='http://127.0.0.1:8000';
+const URL='https://www.mxplanb.xyz';
 
 export function noticiasListAll(){
     const request=axios.get(`${URL}/article/articulofiltro/`)
@@ -36,6 +36,16 @@ export function noticiasCategoriAll(categoria){
                           .then(response=>response.data)
   return {
       type:'GET_ARTICLE_CATEGORIES',
+      payload:request
+  }
+}
+
+
+export function directoriosall(){
+    const request=axios.get(`${URL}/article/directorio/`)
+                          .then(response=>response.data)
+  return {
+      type:'GET_DIRECTORIOS',
       payload:request
   }
 }

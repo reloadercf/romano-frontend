@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import {CardCarrousel} from './CardCarrousel';
 import {Icon} from 'antd'
-import {Link} from 'react-router-dom';
-
-
-//import { Carousel } from 'react-responsive-carousel';
 import Carousel from 'nuka-carousel';
 
 class Carrousel extends Component {
@@ -12,6 +8,7 @@ class Carrousel extends Component {
     state={
         slug:null
     }
+
     render() {
 
         const settings = {

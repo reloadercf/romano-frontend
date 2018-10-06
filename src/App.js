@@ -11,14 +11,28 @@ const {Content} = Layout;
 
 class App extends Component {
 
+  
+  state = {
+    current: 'mail',
+  }
+
+  handleClick = (e) => {
+    console.log('click ', e);
+    this.setState({
+      current: e.key,
+    });
+  }
+
+
 
   render() {
+    let{current}=this.state
 
     return (
        <Layout>
          <NavMenu/>
          <Layout className="layout-videos">
-          <HeaderSection/>
+          <HeaderSection current={current} handleClick={this.handleClick}/>
           <Content className="content" >
            <Routes />
           </Content>

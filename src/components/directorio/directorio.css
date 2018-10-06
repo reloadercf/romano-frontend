@@ -1,0 +1,226 @@
+.header_directorio{
+    position: relative;
+    background: #393e46;
+    width: 100%;
+    height: 20vh;
+    z-index: 0;
+  }
+  
+  .header_directorio .overlay{
+      position: absolute;
+      height: 20vh;
+      width: 100%;
+      background-color: rgba(255,255,255,.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      z-index: 0;
+  }
+  .overlay h1{
+      position: absolute;
+      z-index: initial;
+      padding: 0 1em;
+      color: rgb(2, 2, 2);
+      font-size: 50px;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      z-index: 0;
+  }
+
+
+
+  .div_directorios{
+      padding: 20px 40px 20px 40px;      
+  }
+
+
+.div_filtro{
+    display: flex;
+    justify-content: start;
+}
+.card_directorio{
+      background: #ffff;
+      padding: 0px 20px 0px 20px;
+      border-radius: 10px;
+      box-shadow: 2px 1px 10px 2px rgba(0,0,0,0.36);
+
+
+  }
+.card_directorio span{
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: .5;
+    text-transform: uppercase;
+}
+
+.card_directorio_logo{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.card_directorio_logo img{
+      width: 100%;
+      height: 60%;
+}
+
+
+.card_directorio_info h3 {
+ text-transform: uppercase;
+ font-size: 18px;
+ letter-spacing: 2px;
+}
+
+.card_directorio_info p {
+    font-size: 14px;
+    opacity: .6;
+}
+.card_directorio_info_desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+.card_directorio_info_desc span {
+    font-size: 10px;
+    opacity: 1;
+}
+
+
+.card_directorio_info_telefonos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.card_directorio_info_numeros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_directorio_info_numeros span{
+    color: #393e46;
+    opacity: 1;
+    font-size: 14px;
+}
+
+
+.card_directorio_btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+
+.card_directorio_btn a{
+    text-decoration: none;
+    background: #545455;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_directorio_tipo_dos{
+    margin-top: 20px; 
+}
+
+.div_directorio_tipo_dos .card{
+   padding: 5px;
+}
+
+.div_directorio_tipo_dos .card h3{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+ }
+
+ .div_directorio_tipo_dos .card hr{
+    
+ }
+
+ .div_directorio_tipo_dos .card p{
+    font-size: 12px;
+    text-align: justify;
+
+}
+
+.div_directorio_tipo_dos .card .category{
+    font-size: 10px;
+    text-align: justify;
+    opacity: .7;
+    margin-top: 5px;
+    text-align: right;
+
+}
+
+
+
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+
+    .header_directorio{
+        position: relative;
+        background: #393e46;
+        width: 100%;
+        height: 20vh;
+        z-index: 0;
+      }
+      
+      .header_directorio .overlay{
+          position: absolute;
+          height: 20vh;
+          width: 100%;
+          background-color: rgba(255,255,255,.9);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          z-index: 0;
+      }
+      .overlay h1{
+          position: absolute;
+          z-index: initial;
+          padding: 0 1em;
+          color: rgb(2, 2, 2);
+          font-size: 30px;
+          letter-spacing: 10px;
+          text-transform: uppercase;
+          z-index: 0;
+      }
+    
+
+    .card_directorio_btn{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0 10px 0;
+    }
+
+.card_directorio_btn a{
+    text-decoration: none;
+    background: #545455;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+    
+
+}
+
+
+
+ 

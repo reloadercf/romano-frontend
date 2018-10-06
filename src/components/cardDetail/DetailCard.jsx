@@ -5,9 +5,18 @@ import {faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare} from '
 
 
 class DetailCard extends Component {
+
+    state={
+        noticias:null
+    }
+
+    componentWillMount(){
+        this.setState({noticias:this.props.noticias})
+        
+    }
     render() {  
-        let {noticias} = this.props
-        console.log(this.props)
+        let {noticias} = this.state
+        console.log(noticias)
         return (
             <div>
                 <Row >

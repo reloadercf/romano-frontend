@@ -27,6 +27,7 @@ class HomeContainer extends Component {
                  <Row type="flex" justify="center" align="center">
                     <Col md={24} sm={24} xs={24} style={{marginBottom: "100px"}}>
                         <CarrouselDos noticias={this.props.noticias.noticiasList} />
+                        
                         <Carrousel  noticias={this.props.noticias.noticiasList} />
                     </Col>
                 </Row>

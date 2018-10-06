@@ -11,12 +11,24 @@ import { HeaderCategory } from './HeaderCategory';
 
 class CategoriesPage extends Component {
 
-    componentDidMount(){
+
+    state={
+        noticias:null
+    }
+    componentWillMount(){
         this.props.noticiasCategoriAll(this.props.match.params.modulo_name);
     }
-
+    
+    get_noticias_categoria()
+    {
+        this.setState({noticias:this.props.noticiasCategory})
+    }
+     
+   
     render() {
-        console.log(this.props.noticias.noticiasCategory)
+            console.log(this.state.noticias)
+            console.log(this.props.match.params.modulo_name)
+
         return (
             <div>
                  <Row type="flex" justify="center" align="center">

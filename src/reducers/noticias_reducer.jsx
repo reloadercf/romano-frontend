@@ -8,6 +8,8 @@ export default function(state={}, action) {
             return {...state, categoriesData:action.payload}
         case 'GET_ARTICLE_CATEGORIES':
             return {...state, noticiasCategory:action.payload}
+        case 'GET_DIRECTORIOS':
+            return {...state, directories:action.payload}
         default:
             return state;
     }
