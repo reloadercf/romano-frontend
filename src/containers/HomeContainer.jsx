@@ -11,16 +11,14 @@ import {noticiasListAll} from '../actions'
 import {bindActionCreators} from 'redux'
 
 
-
-
 class HomeContainer extends Component {
 
     componentWillMount(){
         this.props.noticiasListAll();
     }
+ 
 
     render() {
-        console.log(this.props.noticias.noticiasList)
         return (
             <div>
                             

@@ -1,6 +1,18 @@
 
 import axios from 'axios'
 const URL='https://www.mxplanb.xyz';
+const  region='asturias'
+
+
+
+export function renderRegion(){
+    const request=axios.get(`${URL}/article/articulofiltro/`)
+                            .then(response=>response.data)
+    return {
+        type:'GET_REGION',
+        payload:request
+    }
+}
 
 export function noticiasListAll(){
     const request=axios.get(`${URL}/article/articulofiltro/`)
@@ -36,6 +48,8 @@ export function noticiasCategoriAll(categoria){
                           .then(response=>response.data)
   return {
       type:'GET_ARTICLE_CATEGORIES',
+
+      
       payload:request
   }
 }

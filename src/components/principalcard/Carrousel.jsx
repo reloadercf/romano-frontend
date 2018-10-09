@@ -30,28 +30,31 @@ class Carrousel extends Component {
 
     
         return (
-            
-            <Carousel  speed={200} autoplay={true}   
-          
-              renderCenterLeftControls={({ previousSlide }) => (
-                <button onClick={previousSlide} style={{background:"#323232", padding:"5px"}}> <Icon type="left" theme="outlined"  style={{ fontSize: '30px', color: '#ffff' }} /> </button>
-              )}
-              renderCenterRightControls={({ nextSlide }) => (
-                <button onClick={nextSlide} style={{background:"#323232"}}><Icon type="right" theme="outlined" style={{ fontSize: '30px', color: '#ffff' }} /></button>
-              )}
-              
-              dragging={true}
-              >
- 
-                 {noticias  &&  noticias.length> 0? 
-                     noticias.map((c, key)=>( 
-                      <CardCarrousel {...c} key={key}
-                      />    
-                ))
-                :null
-                  } 
+            <div style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
+                <Carousel speed={200} autoplay={true}
+                  
+                    renderCenterLeftControls={({ previousSlide }) => (
+                        <button onClick={previousSlide} style={{ background: "#323232", padding: "5px" }}> <Icon type="left" theme="outlined" style={{ fontSize: '30px', color: '#ffff' }} /> </button>
+                    )}
+                    renderCenterRightControls={({ nextSlide }) => (
+                        <button onClick={nextSlide} style={{ background: "#323232" }}><Icon type="right" theme="outlined" style={{ fontSize: '30px', color: '#ffff' }} /></button>
+                    )}
 
-            </Carousel>
+                    dragging={true}
+                >
+
+                    {noticias && noticias.length > 0 ?
+                        noticias.map((c, key) => (
+                            <CardCarrousel {...c} key={key}
+                            />
+                        ))
+                        : null
+                    }
+
+                </Carousel>
+
+            </div>
+          
         );
     }
 }

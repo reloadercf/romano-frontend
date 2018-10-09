@@ -42,28 +42,28 @@ class NavMenu extends Component {
                 breakpoint="lg"
                 collapsedWidth="0"
                 collapsible={true}
-                onCollapse={(collapsed, type) => 
-            {
-                console.log(collapsed, type);
-            }}
+
+                
+              
                 style={{
                 height: '100vh',
                 width:"300px",
                 position: 'fixed',
                 backgroundColor:"#ffff",
                 zIndex: 2
+                    
             }}>
 
                 <div className ="div-logo" > 
                     <img src={logo} style={style.logo} alt=""/> 
                 </div>
                 <Menu inlineCollapsed={this.state.collapsed}  theme="light" mode="inline" >
-                    <Menu.Item key="a">
+                    {/* <Menu.Item key="a">
                         <span className="nav-text"><Link to='/' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />INICIO</Link></span>
                     </Menu.Item>
                     <Menu.Item key="b">
                         <span className="nav-text"><Link to='/directorio' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />DIRECTORIO</Link></span>
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <SubMenu key="sub1" title={<span className="submenu-text"><a href="#"> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />CATEGORIAS</a></span>}>
                         {categorias && categorias.length > 0 ?
                             categorias.map((c, key) => (

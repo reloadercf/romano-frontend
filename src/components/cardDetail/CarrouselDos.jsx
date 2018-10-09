@@ -13,22 +13,21 @@ export class CarrouselDos extends Component {
           let{noticias}=this.props
 
         return (
-            <Carousel speed={200} autoplay={true} slidesToShow={3} slidesToScroll={1}    dragging={true}   
+            <Carousel speed={200} autoplay={true} slidesToShow={5} slidesToScroll={1}  dragging={true}   
+            withoutControls={true}
               
             renderCenterLeftControls={({ previousSlide }) => (
-              <button onClick={previousSlide} style={{background:"#323232", padding:"5px"}}> <Icon type="left" theme="outlined"  style={{ fontSize: '15px', color: '#ffff' }} /> </button>
+              <button onClick={previousSlide} style={{background:"#323232", padding:"5px"}}> <Icon type="left" theme="outlined"  style={{ fontSize: '10px', color: '#ffff' }} /> </button>
             )}
             renderCenterRightControls={({ nextSlide }) => (
-              <button onClick={nextSlide} style={{background:"#323232"}}><Icon type="right" theme="outlined" style={{ fontSize: '15px', color: '#ffff' }} /></button>
+              <button onClick={nextSlide} style={{background:"#323232"}}><Icon type="right" theme="outlined" style={{ fontSize: '10px', color: '#ffff' }} /></button>
             )}
-            
-         
-            
+
             >
             {noticias &&  noticias.length> 0? 
               noticias.map((c, key)=>(
                <div key={key} >
-                   <CardCarrousel  {...c}/>              
+                   <CardCarrousel  {...c} />              
                </div>
            )):null} 
 

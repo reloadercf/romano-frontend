@@ -1,15 +1,25 @@
 .header{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     background: #ffff;
     position: fixed;
     z-index: 1;
-    padding: 2em;
 }
 
-.header img{
-  width: 40%;
+
+
+.header-link-img 
+{
+  text-align: center;
+  
+}
+.menu_header{
+  padding: 0;
+}
+
+.header-link-img img{
+  width: 50%;
 }
