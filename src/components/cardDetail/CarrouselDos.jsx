@@ -5,7 +5,7 @@ import {Icon} from 'antd'
 
 export class CarrouselDos extends Component {
 
-
+        
    
     render() {
        
