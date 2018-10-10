@@ -5,10 +5,10 @@ import './navbar.css'
 import {connect} from 'react-redux'
 import {categories} from '../../actions'
 import {bindActionCreators} from 'redux'
-import {Link} from 'react-router-dom' 
+ 
 
 const {Sider} = Layout;
-const SubMenu = Menu.SubMenu;
+//const SubMenu = Menu.SubMenu;
 
 const style = {
     logo: {

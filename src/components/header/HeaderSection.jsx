@@ -1,7 +1,6 @@
 import React from 'react'
 import './header.css'
 import logo from './logo.png';
-import {Link} from 'react-router-dom' 
 import {Menu, Icon, Button} from 'antd'
 
 

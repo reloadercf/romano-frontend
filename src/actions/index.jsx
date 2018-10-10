@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 const URL='https://www.mxplanb.xyz';
-const  region='asturias'
+//const  region='asturias'
 
 
 

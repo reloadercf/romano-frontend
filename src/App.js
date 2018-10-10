@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Layout, Divider} from 'antd';
+import {Layout} from 'antd';
 import NavMenu from './components/navbar/NavMenu';
 import Routes from './Routes';
 import { HeaderSection } from './components/header/HeaderSection';
