@@ -61,10 +61,10 @@ class App extends Component {
     let{current, collapsed}=this.state
     return (
       <div>
-        <HeaderSection onClick={this.toggleClose}   current={current} handleClick={this.handleClick} region={this.props.noticias.noticiasList} collapsed={collapsed} toggleCollapsed={this.toggleCollapsed} />
-        <Layout  onClick={this.toggleClose}  >
+        <HeaderSection  current={current} handleClick={this.handleClick} region={this.props.noticias.noticiasList} collapsed={collapsed} toggleCollapsed={this.toggleCollapsed} />
+        <Layout   >
        
-       <NavMenu  collapsed={collapsed} onClick={this.toggleClose}  />
+       <NavMenu  collapsed={collapsed}  />
        <Layout className="layout-videos">
        
         <Content className="content" >
