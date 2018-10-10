@@ -11,20 +11,20 @@ class Carrousel extends Component {
 
     render() {
 
-        const settings = {
-            dots: true,
-            fade:true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            cssEase: "linear",
-            pauseOnHover: true,
+        // const settings = {
+        //     dots: true,
+        //     fade:true,
+        //     infinite: true,
+        //     speed: 500,
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 4000,
+        //     cssEase: "linear",
+        //     pauseOnHover: true,
          
            
-        };
+        // };
 
         let{noticias}=this.props
 

@@ -5,10 +5,10 @@ import './navbar.css'
 import {connect} from 'react-redux'
 import {categories} from '../../actions'
 import {bindActionCreators} from 'redux'
-import {Link} from 'react-router-dom' 
+import { BackDrop } from '../header/BackDrop';
 
 const {Sider} = Layout;
-const SubMenu = Menu.SubMenu;
+//const SubMenu = Menu.SubMenu;
 
 const style = {
     logo: {
@@ -32,6 +32,7 @@ class NavMenu extends Component {
         console.log(this.props.collapsed)
         let categorias=this.props.noticias.categoriesData
         return (
+            <div>
             <Sider
                 breakpoint="lg"
                 collapsedWidth="0"
@@ -62,11 +63,15 @@ class NavMenu extends Component {
                             )) : null
                         }
 
-           
-                    
                 </Menu>
                 
             </Sider>
+
+
+                
+
+            </div>
+           
         );
     }
 }

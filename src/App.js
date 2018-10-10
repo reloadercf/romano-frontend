@@ -10,6 +10,8 @@ import { FooterSection } from './components/footer/FooterSection';
 import {connect} from 'react-redux'
 import {noticiasListAll} from './actions'
 import {bindActionCreators} from 'redux'
+import { BackDrop } from './components/header/BackDrop';
+
 
 
 
@@ -61,20 +63,25 @@ class App extends Component {
     let{current, collapsed}=this.state
     return (
       <div>
+        <div>
         <HeaderSection  current={current} handleClick={this.handleClick} region={this.props.noticias.noticiasList} collapsed={collapsed} toggleCollapsed={this.toggleCollapsed} />
-        <Layout   >
+        <Layout  onClick={this.toggleClose}  >
+        <NavMenu  collapsed={collapsed}  />
        
-       <NavMenu  collapsed={collapsed}  />
        <Layout className="layout-videos">
        
         <Content className="content" >
          <Routes />
         </Content>
 
-      <FooterSection />
+          <FooterSection />
     
-      </Layout>
-    </Layout>
+          </Layout>
+      
+        </Layout>
+       
+        </div>
+
   
       </div>
       

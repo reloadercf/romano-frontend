@@ -1,6 +1,5 @@
 import React from 'react'
 import {Row, Col, Icon} from 'antd'
-import logo from '../header/logo.png'
 
 export const DirectorioCard=({categori, logotipo, cliente, descripcion, direccion, telefono, telefonodos, correo, ubicacion,sitioweb})=>{
     return(

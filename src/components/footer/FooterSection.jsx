@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Col, Icon} from 'antd';
+import {Row, Col} from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGooglePlay, faAppStoreIos} from '@fortawesome/free-brands-svg-icons'
 export const FooterSection=()=>{
@@ -10,13 +10,13 @@ export const FooterSection=()=>{
                        <div className="contacto">
                            <h2>Contacto</h2>
                            <span>
-                               Correo: contacto_@mxasturias.com.mx
+                               contacto@planb.com.mx
                            </span>
                        </div>
                     </Col>
                     <Col lg={6} md={6} xs={24} style={{marginBottom: "1em"}}>
                        <div className="follow">
-                           <h2>Descarga la App</h2>
+                           <h2>Disponible para:</h2>
                            <div style={{marginTop:"20px"}}>
                                 <span style={{display:"flex", justifyContent:"start", alignItems: "center",}} >Android <FontAwesomeIcon icon={faGooglePlay} size="3x"  style={{color:"#ffff", marginLeft:"1em"}}/>     </span>
                                 
@@ -29,7 +29,7 @@ export const FooterSection=()=>{
                     </Col>
                     <Col lg={6} md={6} xs={24} style={{marginBottom: "1em"}}>
                         <div className="developer"> 
-                            <p>PLANB</p>
+                            <p>Designed by PLANB</p>
                             <h2>MX Asturias</h2>   
                         
                         </div>    

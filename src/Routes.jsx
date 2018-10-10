@@ -1,7 +1,5 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom';
-import HomePage from './components/home/HomePage';
-import { Detail } from './components/cardDetail/Detail';
 import DetailContainer from './containers/DetailContainer'
 import NotFound from './components/cards/NotFound'
 import CategoriesPage from './components/categorias/CategoriesPage';
