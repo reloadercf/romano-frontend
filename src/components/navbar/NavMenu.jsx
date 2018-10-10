@@ -5,7 +5,7 @@ import './navbar.css'
 import {connect} from 'react-redux'
 import {categories} from '../../actions'
 import {bindActionCreators} from 'redux'
-import { BackDrop } from '../header/BackDrop';
+
 
 const {Sider} = Layout;
 //const SubMenu = Menu.SubMenu;
@@ -40,11 +40,14 @@ class NavMenu extends Component {
                 collapsible
                 collapsed={this.props.collapsed}
                 style={{
-                height: '100vh',
                 width:"300px",
                 position: 'fixed',
+                height:"100%",
+                top:"0",
+                left:"0",
+                boxShadow: "2px 0px 5px rgba(0,0,0,0.5)",
                 backgroundColor:"#ffff",
-                zIndex: 2
+                zIndex: 200
                 
                     
             }}>

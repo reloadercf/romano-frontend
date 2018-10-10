@@ -1,9 +1,9 @@
 import React from 'react'
 import './backdrop.css'
-export const BackDrop =()=>{
+export const BackDrop =(props)=>{
     return(
-        <div className="backdrop">
+        <div className="backdrop" onClick={props.click}/>
 
-        </div>
+        
     )
 }

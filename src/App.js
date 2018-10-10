@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Layout, Divider} from 'antd';
+import {Layout} from 'antd';
 import NavMenu from './components/navbar/NavMenu';
 import Routes from './Routes';
 import { HeaderSection } from './components/header/HeaderSection';
@@ -59,30 +59,29 @@ class App extends Component {
 
 
   render() {
- 
+   
     let{current, collapsed}=this.state
+    let sideDrawer;
+    let bacdrop;
+
+    if(!this.state.collapsed)
+    {
+      sideDrawer=  <NavMenu  collapsed={collapsed}  />
+      bacdrop = <BackDrop click={this.toggleClose}/>
+    }
+
     return (
       <div>
-        <div>
+
         <HeaderSection  current={current} handleClick={this.handleClick} region={this.props.noticias.noticiasList} collapsed={collapsed} toggleCollapsed={this.toggleCollapsed} />
-        <Layout  onClick={this.toggleClose}  >
-        <NavMenu  collapsed={collapsed}  />
-       
-       <Layout className="layout-videos">
-       
-        <Content className="content" >
-         <Routes />
-        </Content>
-
-          <FooterSection />
-    
-          </Layout>
-      
+        {sideDrawer}
+        {bacdrop}
+        <Layout className="layout-videos">
+          <Content className="content" >
+            <Routes />
+          </Content>
         </Layout>
-       
-        </div>
-
-  
+        <FooterSection />
       </div>
       
     );
