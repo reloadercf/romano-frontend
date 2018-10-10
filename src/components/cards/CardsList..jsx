@@ -12,7 +12,7 @@ export const CardList = ({noticias}) => {
                     noticias.map((c, key) => (
                     <Col md={24} sm={24} xs={24} key={key}>
                         <CardComponent {...c}/>
-                      <hr style={{opacity:"0.1"}}/>
+                      <hr style={{opacity:"0.5"}}/>
                     </Col>
                 )):
                 <div>¡¡No hay noticias disponibles!!</div>

@@ -24,12 +24,12 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
                         <span>{fechainicio}</span>
                     </div>
 
-                    <Link to={`/detail/${slug}`}> 
+                    <a href={`/detail/${slug}`}> 
                         <h2>{titulo}</h2>
-                    </Link>
+                    </a>
 
                     <h3>{subtitle}</h3>
-                    <hr style={{opacity:"0.2"}}/>
+                    <hr style={{opacity:"0.3"}}/>
 
                     <p>
                         {textoprevio}                     
@@ -37,7 +37,7 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
                     <span>Por: Autor {autor.nombre}</span>  
 
 
-                    <ul>
+                    {/* <ul>
                         <li>                       
                             <FontAwesomeIcon icon={faTwitterSquare} size="2x"  style={{color:"#15b7b9"}}/>                                  
                         </li>
@@ -56,7 +56,7 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
                             <FontAwesomeIcon icon={faWhatsappSquare} size="2x" style={{color:"#2eb872"}}/>    
                         </li>
                      
-                    </ul>
+                    </ul> */}
 
                 </article>
             </Col>

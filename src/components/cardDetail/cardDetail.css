@@ -22,7 +22,7 @@
 
 
   .detail-img1 img {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-bottom: 2em;
   }
@@ -35,14 +35,14 @@
   }
   
   .detail_title{
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 3px;
     text-transform: uppercase;
     padding: 3px;
     background: #838689;
     color:#f6f6f6;
     width: 100%; 
-    transition: 1s; 
+    transition:0.5s; 
   }
 
   .detail_categoria{
@@ -58,13 +58,13 @@
 
 
   .detail_title:hover{
-    font-size: 25 px;
+    font-size: 25px;
     letter-spacing: 3px;
     text-transform: uppercase;
     padding: 3px;
     background: #303841;
     color:#f6f6f6;
-    width: 80%; 
+    width: 90%; 
     
   }
 
@@ -90,7 +90,7 @@
   .detail_descripcion_uno p{
     font-size: 18px;
     line-height: 1.8;
-    padding-right: 5em;
+  
     letter-spacing: 1px;
     text-align: justify;
     margin-bottom: 2em;
@@ -227,6 +227,7 @@
       width: 90%;
       display: none;
     }
+  
     .detail-img1 img {
       width: 100%;
       height: auto;
@@ -277,6 +278,19 @@
       flex-direction: column;
       justify-content: center;
     
+    }
+    .mostrar_carrousel{
+      display: none;
+    }
+
+    .detail_descripcion_uno p{
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-align: justify;
+      margin-bottom: 2em;
+      font-family: 'Lato', sans-serif;
+      word-wrap: break-word;
     }
    
   }

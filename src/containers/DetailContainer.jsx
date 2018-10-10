@@ -54,22 +54,25 @@ class DetailContainer extends Component
     render() {        
         return (
                 <Layout style={{background:"#ffff"}}>
-                <Header
+                <Header 
                     style={{
                     height: 'auto',
-                    background: '#ffff'
+                    background: '#ffff',
+                    marginBottom: "100px",
                 }}>
-                {this.noticiasCarrousel(this.props.noticias)}   
+              
                 </Header>
                     <Row gutter={16}>
-                        <Col lg={18} xl={18} md={18} sm={24} xs={24} style={styles.col}>                        
+                    {this.noticiasCarrousel(this.props.noticias)}   
+                        <Col lg={17} xl={17} md={17} sm={24} xs={24} style={styles.col}>                        
                          {this.noticiasTemplate(this.props.noticias)}        
                         </Col>
-                        <Col lg={6} xl={6} md={6} sm={24} xs={24} >                      
+                        <Col lg={7} xl={7} md={7} sm={24} xs={24} >                      
+                            <CardComponentDos/>                   
                             <CardComponentDos/> 
                             <CardComponentDos/> 
                             <CardComponentDos/> 
-                            <CardComponentDos/>                             
+                            <CardComponentDos/> 
                         
                         </Col>
                     </Row>

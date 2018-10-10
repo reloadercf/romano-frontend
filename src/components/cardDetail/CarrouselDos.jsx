@@ -13,9 +13,10 @@ export class CarrouselDos extends Component {
           let{noticias}=this.props
 
         return (
+            <div className="mostrar_carrousel">
             <Carousel speed={200} autoplay={true} slidesToShow={5} slidesToScroll={1}  dragging={true}   
             withoutControls={true}
-              
+            
             renderCenterLeftControls={({ previousSlide }) => (
               <button onClick={previousSlide} style={{background:"#323232", padding:"5px"}}> <Icon type="left" theme="outlined"  style={{ fontSize: '10px', color: '#ffff' }} /> </button>
             )}
@@ -33,6 +34,8 @@ export class CarrouselDos extends Component {
 
 
             </Carousel>
+            </div>
+         
         );
     }
 }

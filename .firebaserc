@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "mxasturias",
-    "mxasuturias": "mxasturias01"
+    "mxasuturias": "mxasturias01",
+    "mxasturias": "mxasturias01"
   }
 }
