@@ -30,7 +30,7 @@ class Carrousel extends Component {
 
     
         return (
-            <div style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
+            <div style={{display:"flex", alignItems: "center", justifyContent: "center", marginTop: "10px"}}>
                 <Carousel speed={200} autoplay={true}
                   
                     renderCenterLeftControls={({ previousSlide }) => (
@@ -45,8 +45,7 @@ class Carrousel extends Component {
 
                     {noticias && noticias.length > 0 ?
                         noticias.map((c, key) => (
-                            <CardCarrousel {...c} key={key}
-                            />
+                            <CardCarrousel {...c} key={key}  />
                         ))
                         : null
                     }

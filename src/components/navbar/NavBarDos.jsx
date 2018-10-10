@@ -1,6 +1,5 @@
 import React from 'react'
 import {Icon} from 'antd'
-import {Link} from 'react-router-dom'
 import ResponsiveMenu from 'react-responsive-navbar';
 export const NavBarDos =()=>{
     return(

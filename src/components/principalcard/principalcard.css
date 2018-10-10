@@ -8,7 +8,6 @@
   .container img{
     width:1000px;
     height: 500px;
- 
     opacity: 0.8;
     display: block;
     margin-left: auto;
@@ -19,20 +18,32 @@
     position: relative;
     width: auto;
 
+
   }
 
 
   .bottomleft {
     position: absolute;
-    bottom: 6em;
+    bottom: 3em;
     font-size: 30px;
     color: #222831;
     background: white;
     padding: 0.5em;
     opacity: 0.8;
     width: 70%; 
-    transition: 0.3s;  
-  
+    transition: 0.5s; 
+}
+
+.bottomleft:hover {
+  position: absolute;
+  bottom: 3em;
+  font-size: 30px;
+  color: #ffffff;
+  background: rgb(0, 0, 0);
+  padding: 0.5em;
+  opacity: 0.8;
+  width: 75%; 
+
 }
 
 

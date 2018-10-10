@@ -95,6 +95,7 @@
     text-align: justify;
     margin-bottom: 2em;
     font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
   }
   
   .detail_descripcion_dos{

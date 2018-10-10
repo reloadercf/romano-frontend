@@ -43,7 +43,7 @@ class DirectorioPage extends Component {
                             {directorios && directorios.length > 0 ?
                                 directorios.map((c, key) => (
                                     <div key={key} style={{marginTop:"30px"}} >
-                                       <DirectorioCard {...c} />      
+                                       <DirectorioCard {...c}  />      
                                     </div>
                                                                 
                                 )) :

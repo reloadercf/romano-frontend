@@ -2,41 +2,46 @@ import React from 'react'
 import './header.css'
 import logo from './logo.png';
 import {Link} from 'react-router-dom' 
-import {Menu, Icon} from 'antd'
-
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+import {Menu, Icon, Button} from 'antd'
 
 
-export const HeaderSection = ({current, handleClick}) => {
+
+
+export const HeaderSection = ({current, handleClick, collapsed, toggleCollapsed}) => {
     return (
         
       
-           
             <div className="header">
                 <div className="header-link-img">
-                     <Link to='/'  >
-                    <img src={logo} alt="" />
-                    </Link>
+                      <a href="/">
+                         <img src={logo} alt="" />
+                      </a>
+             
+                
                 </div>
                 <div className="menu_header">
+                
                     <Menu
                         onClick={handleClick}
                         selectedKeys={[current]}
-                        mode="horizontal"
+                        className="menu"
                     >
-                        <Menu.Item key="a">
-                        <span className="nav-text"><Link to='/' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />INICIO</Link></span>
+                    <Menu.Item>
+                        <Button onClick={toggleCollapsed} >
+                            <Icon type={collapsed ? 'menu-unfold' : 'menu-fold'} style={{ fontSize: "20px" }} />
+                        </Button>
                     </Menu.Item>
-                    <Menu.Item key="b">
-                        <span className="nav-text"><Link to='/directorio' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />DIRECTORIO</Link></span>
+         
+                    <Menu.Item key="b" className="mostrar_menu">
+                        <span className="nav-text"><a href='/' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />INICIO</a></span>
                     </Menu.Item>
-                    <Menu.Item key="c">
-                        <span className="nav-text"><Link to='/' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />INICIO</Link></span>
+                    <Menu.Item key="c" className="mostrar_menu">
+                        <span className="nav-text"><a href='/directorio' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />DIRECTORIO</a></span>
                     </Menu.Item>
-                    <Menu.Item key="d">
-                        <span className="nav-text"><Link to='/directorio' > <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" />DIRECTORIO</Link></span>
-                    </Menu.Item>
+
+           
+                  
+                   
 
                     </Menu>
 

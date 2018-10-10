@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Layout} from 'antd';
+import {Layout, Divider} from 'antd';
 import NavMenu from './components/navbar/NavMenu';
 import Routes from './Routes';
 import { HeaderSection } from './components/header/HeaderSection';
@@ -20,22 +20,35 @@ class App extends Component {
 
   
   state = {
-    current: 'mail',
+    current: 'a',
     noticias:null,
+    collapsed: true,
     region:{}
     
   }
 
   componentWillMount()
   {
+    
     this.props.noticiasListAll();
   
   }
 
- 
+  toggleCollapsed = () => {
+    this.setState((prevState)=>{
+      return {collapsed:!prevState.collapsed}
+    })
+      
+    
+  }
+
+  toggleClose = () => {
+  this.setState({collapsed:true})
+    
+  }
+
 
   handleClick = (e) => {
-    console.log('click ', e);
     this.setState({
       current: e.key,
     });
@@ -45,21 +58,26 @@ class App extends Component {
 
   render() {
  
-    let{current}=this.state
+    let{current, collapsed}=this.state
     return (
-       <Layout>
-         <NavMenu/>
-         <Layout className="layout-videos">
-          <HeaderSection current={current} handleClick={this.handleClick} region={this.props.noticias.noticiasList} />
-          <Content className="content" >
-           <Routes />
-          </Content>
+      <div>
+        <HeaderSection onClick={this.toggleClose}   current={current} handleClick={this.handleClick} region={this.props.noticias.noticiasList} collapsed={collapsed} toggleCollapsed={this.toggleCollapsed} />
+        <Layout  onClick={this.toggleClose}  >
+       
+       <NavMenu  collapsed={collapsed} onClick={this.toggleClose}  />
+       <Layout className="layout-videos">
+       
+        <Content className="content" >
+         <Routes />
+        </Content>
 
-        <FooterSection/>
-      
-        </Layout>
-      </Layout>
+      <FooterSection />
     
+      </Layout>
+    </Layout>
+  
+      </div>
+      
     );
   }
 }

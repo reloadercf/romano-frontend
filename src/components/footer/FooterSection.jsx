@@ -1,6 +1,7 @@
 import React from 'react'
 import {Row, Col, Icon} from 'antd';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGooglePlay, faAppStoreIos} from '@fortawesome/free-brands-svg-icons'
 export const FooterSection=()=>{
     return(
         <div className="footer">  
@@ -11,21 +12,18 @@ export const FooterSection=()=>{
                            <span>
                                Correo: contacto_@mxasturias.com.mx
                            </span>
-                            <span>
-                                Tel: 771-568-5589
-                            </span>
                        </div>
                     </Col>
                     <Col lg={6} md={6} xs={24} style={{marginBottom: "1em"}}>
                        <div className="follow">
-                           <h2>Siguenos</h2>
-                           <div className="icons">
-                                <Icon type="facebook" style={{fontSize: "30px", marginRight: ".5em"}}/>
-                                <Icon type="twitter" style={{fontSize: "30px",marginRight: ".5em"}}/>
-                                <Icon type="instagram"style={{fontSize: "30px", marginRight: ".5em"}} />
+                           <h2>Descarga la App</h2>
+                           <div style={{marginTop:"20px"}}>
+                                <span style={{display:"flex", justifyContent:"start", alignItems: "center",}} >Android <FontAwesomeIcon icon={faGooglePlay} size="3x"  style={{color:"#ffff", marginLeft:"1em"}}/>     </span>
+                                
                            </div>
-                           <div> 
-                               <span>www.planb.com.mx</span>
+                           <div  style={{marginTop:"20px"}}> 
+                               <span style={{display:"flex", justifyContent:"start", alignItems: "center"}}>IOS  <FontAwesomeIcon icon={faAppStoreIos} size="3x"  style={{color:"#ffff", marginLeft:"1em"}}/>     </span>
+                               
                            </div>
                        </div>
                     </Col>

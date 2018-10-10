@@ -6,9 +6,6 @@ import App from './App';
 //import registerServiceWorker from './registerServiceWorker';
 import 'moment/locale/fr';
 import {BrowserRouter} from 'react-router-dom';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux'
 import promiseMiddleware from 'redux-promise'
@@ -31,5 +28,3 @@ ReactDOM.render(
    
 </Provider>, document.getElementById('root'));
 
-
-//registerServiceWorker();

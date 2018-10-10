@@ -10,11 +10,11 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
         <Row className="recipe-card">
 
             <Col md={10} sm={24} xs={24}>
-            <Link to={`detail/${slug}`}> 
+            <a href={`/detail/${slug}`}> 
                 <div className="div-img hidden">
                     <img className="img" src={imagenportada} alt={titulo}/>
                 </div>
-            </Link>
+            </a>
            
             </Col>
             <Col md={14} sm={24} xs={24}>
