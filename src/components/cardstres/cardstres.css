@@ -1,0 +1,115 @@
+
+.card_component_tres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding: 0;
+}
+
+.div_img_comp_tres{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div_img_comp_tres img {
+    width: 80%;
+}
+
+.card_tres_text {
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.card_tres_text:hover{
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+    color: white;
+    background: #0000;
+
+}
+.card_tres_text h3{
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.card_tres_text span{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+  /* Para 480px */  
+  @media only screen and (max-width: 500px) and (min-width: 341px) 
+  {
+  
+    .card_component_tres{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+        margin-top: 2em;
+        padding: 0;
+    }
+    
+    .div_img_comp_tres{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .div_img_comp_tres img {
+        width: 50%;
+    }
+    
+    .card_tres_text {
+        text-align: center;
+        width: 50%;
+        padding: 5px;
+        transition: 0.5s;
+    }
+    
+    .card_tres_text:hover{
+        text-align: center;
+        width: 80%;
+        padding: 5px;
+        color: white;
+        background: #0000;
+    
+    }
+    .card_tres_text h3{
+        font-size: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    
+    .card_tres_text span{
+        font-size: 14px;
+        text-align: center;
+    }
+    
+  
+  
+  }  
+    
+  
+  /* Para 320px */  
+  @media only screen and (max-width: 340px) and (min-width: 5px)  
+  {
+    
+    
+  } 

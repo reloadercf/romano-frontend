@@ -39,7 +39,7 @@ class CategoriesPage extends Component {
 
 
         render() {
-            let {noticias, category}=this.state
+            let {noticias}=this.state
             console.log(this.state.noticias)
          
             let filter_category = noticias.filter(p=>{

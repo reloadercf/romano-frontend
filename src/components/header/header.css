@@ -10,10 +10,10 @@
 }
 
 
-
 .header-link-img 
 {
   text-align: center;
+  background: #ffff;
   
 }
 .menu_header{
@@ -39,6 +39,23 @@
   @media only screen and (max-width: 500px) and (min-width: 341px) 
   {
     
+    .header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #ffff;
+      position: fixed;
+      z-index: 1;
+  }
+
+    .header-link-img 
+    {
+      text-align: center;
+      background: #ffff;
+    }
+  
     .menu_header .menu{
       display: flex;
       flex-direction: row;
@@ -61,6 +78,23 @@
   /* Para 320px */  
   @media only screen and (max-width: 340px) and (min-width: 5px)  
   {
+    .header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #ffff;
+      position: fixed;
+      z-index: 1;
+  }
+
+  .header-link-img 
+    {
+    text-align: center;
+      background: #ffff;
+    }
+
     .menu_header .menu{
       display: flex;
       flex-direction: row;

@@ -1,36 +1,23 @@
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:300');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
-@import './components/principalcard/principalcard.css';
 @import './components/cards/cards.css';
 @import './components/cardsdos/cardsdos.css';
+@import './components/cardstres/cardstres.css';
 @import './components/cardDetail/cardDetail.css';
 @import './components/footer/Footer.css';
 
-
-
-.App {
-    text-align: center;
-
-  }
-  
   
 .layout-videos{
-    background: #FFFF;
+    background-color: #FFFF;
     width: 100%;
     height: auto;
 }
   
-  
-  .div-footer{
-    color: #FFFF;
-    display: flex;
-    justify-content: center;
-  }
-
+ 
   .content{
     margin: 24px 16px 0;
-    background: #FFFF;
+    background-color: #FFFF;
     margin-top: 200px;
     padding-left: 200px;
     padding-right: 200px;
@@ -40,16 +27,42 @@
   @media only screen and (max-width: 980px) and (min-width: 821px) 
   {  
     .layout-videos{
-      margin-left: 0;
-      width: auto;
+      background-color: #FFFF;
+      width: 100%;
+      height: auto;
+  }
+
+  
+    .content{
+      margin: 24px 16px 0;
+      background-color: #FFFF;
+      margin-top: 200px;
+      padding-left: 200px;
+      padding-right: 200px;
+  
     }
   }  
     
   /* Para 800px */  
   @media only screen and (max-width: 820px) and (min-width: 621px) {  
     .layout-videos{
+      background: #FFFF;
       margin-left: 0;
       width: auto;
+    }
+    .div-footer{
+      color: #FFFF;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .content{
+      margin: 24px 16px 0;
+      background: #FFFF;
+      margin-top: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+  
     }
     
     
@@ -59,8 +72,24 @@
   @media only screen and (max-width: 620px) and (min-width: 501px) 
   {
     .layout-videos{
+      background-color: #FFFF;
       margin-left: 0;
       width: auto;
+    }
+
+    .div-footer{
+      color: #FFFF;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .content{
+      margin: 24px 16px 0;
+      background-color: #FFFF;
+      margin-top: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+  
     }
     
   }  
@@ -72,6 +101,10 @@
     .layout-videos{
       margin-left: 0;
       width: auto;
+      background-color: #ffff;
+    }
+    .content{
+      background-color: #FFFF;
     }
 
      .div-logo-header{
@@ -80,7 +113,7 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      background: #FFFF;
+      background-color: #FFFF;
       height: 15vh;
       position: fixed;
       z-index: 1;
@@ -106,6 +139,7 @@
   {
     .layout-videos{
       margin-left: 0;
+      background-color: #ffff;
     }
     .div-logo-header{
       display: flex;
@@ -113,7 +147,7 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      background: #FFFF;
+      background-color: #ffff;
       height: 25vh;
       position: fixed;
       z-index: 1;

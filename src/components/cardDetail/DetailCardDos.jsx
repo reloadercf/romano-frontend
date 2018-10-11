@@ -1,10 +1,9 @@
 import React from 'react';
-import {Row, Col, Icon,Button, Card} from 'antd'
-
+import {Row, Col,  Card} from 'antd'
+import {Icon, Button} from 'antd'
 
 const DetailCardDos =({noticia})=>{
     
-    console.log(noticia)
     return(
         <div>
         <Row >
@@ -100,7 +99,19 @@ const DetailCardDos =({noticia})=>{
 
                 >
                     <div className="detail_descripcion_dos"> 
-                         {/* {this.renderbtn1()} */}
+                         {
+                            noticia.boton1==="Visitar"?<Button href={noticia.link1} target="_blank" type="primary" icon="global">Visitar</Button>:null  
+                          }
+                          {
+                            noticia.boton1==="Llamar"?<div>
+                            <Icon type="phone" theme="outlined" />
+                                <span>Llamar</span>
+                                <span> {noticia.numero_llamada1} </span>
+                            </div>:null
+                          }
+                          {
+                              noticia.boton2==="Comprar"?<Button href={noticia.link1} target="_blank" type="primary" icon="dolar">Comprar</Button>:null
+                          }
                     </div>
                 </Card>
 
@@ -110,7 +121,19 @@ const DetailCardDos =({noticia})=>{
                     cover={<img src={noticia.publicidad2} alt="" style={{width:"100%", height:"300px"}}/>}
                 >
                      <div className="detail_descripcion_dos">
-                             {/* {this.renderbtn2()} */}
+                            {
+                            noticia.boton2==="Visitar"?<Button href={noticia.link2} target="_blank" type="primary" icon="global">Visitar</Button>:null  
+                          }
+                          {
+                            noticia.boton2==="Llamar"?<div>
+                            <Icon type="phone" theme="outlined" />
+                                <span>Llamar</span>
+                                <span> {noticia.numero_llamada2} </span>
+                            </div>:null
+                          }
+                          {
+                              noticia.boton2==="Comprar"?<Button href={noticia.link2} target="_blank" type="primary" icon="dolar">Comprar</Button>:null
+                          }
                         </div>
                 </Card>
 

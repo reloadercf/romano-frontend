@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import {Row, Col} from 'antd'
 import {Layout} from 'antd';
-import DetailCard from '../components/cardDetail/DetailCard'
+//import DetailCard from '../components/cardDetail/DetailCard'
 import {CarrouselDos} from '../components/cardDetail/CarrouselDos';
+import CardsListTres from '../components/cardstres/CardsListTres';
 import CardsListDos from '../components/cardsdos/CardsListDos';
 
-import { CardComponentDos } from '../components/cardsdos/CardComponentDos';
+//import { CardComponentDos } from '../components/cardsdos/CardComponentDos';
 import DetailCardDos from '../components/cardDetail/DetailCardDos';
 
 
@@ -33,7 +34,8 @@ class DetailContainer extends Component
         }
 
 
-        getNoticias=()=>{
+    getNoticias=()=>
+    {
             //const userToken = JSON.parse(localStorage.getItem('userToken'));
             let url =`${URL}/article/articulofiltro/`;
             var request = new Request(url, {
@@ -56,7 +58,7 @@ class DetailContainer extends Component
 
     noticiasdetalle=(data)=>(
             data?
-            <DetailCardDos noticia={data} />  
+            <DetailCardDos noticia={data}/>  
             :null
         )
     noticiasCarrousel=(data)=>(
@@ -67,12 +69,18 @@ class DetailContainer extends Component
 
     noticiasCardList=(data)=>(
         data?
-            <CardsListDos noticias={this.state.detalle_noticia} detalle_noticia={data} slug={this.props.match.params.slug_noticia} />      
+            <CardsListTres noticias={this.state.detalle_noticia} detalle_noticia={data} slug={this.props.match.params.slug_noticia} />      
         :
         null
     )
 
-
+    noticiasCardListDos=(data)=>(
+        data?
+            <CardsListDos noticias={this.state.detalle_noticia} detalle_noticia={data} slug={this.props.match.params.slug_noticia} />      
+        :
+        null
+    )
+    
     render() {             
         let{detalle_noticia}=this.state 
 
@@ -98,11 +106,11 @@ class DetailContainer extends Component
                         {this.noticiasdetalle(detail_noticia)} 
                         </Col>
                         <Col lg={7} xl={7} md={7} sm={24} xs={24} >                      
-                            <CardComponentDos/>                   
+                        {this.noticiasCardList(detail_noticia)}    
                         </Col>
                     </Row>
                     <Row gutter={24} justify={"center"} style={styles.col}>
-                         {this.noticiasCardList(detail_noticia)}    
+                         {this.noticiasCardListDos(detail_noticia)}    
                     </Row>
                   
                 </Layout>

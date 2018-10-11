@@ -10,8 +10,8 @@ export const HeaderSection = ({current, handleClick, collapsed, toggleCollapsed}
     return (
         
       
-            <div className="header">
-                <div className="header-link-img">
+            <div className="header" style={{backgroundColor: "#ffff"}}>
+                <div className="header-link-img" style={{backgroundColor: "#ffff"}}>
                       <Link to="/">
                          <img src={logo} alt="" />
                       </Link>

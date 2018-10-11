@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {CardCarrousel} from './CardCarrousel';
 import {Icon} from 'antd'
 import Carousel from 'nuka-carousel';
+//import './principalcard.css'
 
 class Carrousel extends Component {
 
@@ -11,26 +12,9 @@ class Carrousel extends Component {
 
     render() {
 
-        // const settings = {
-        //     dots: true,
-        //     fade:true,
-        //     infinite: true,
-        //     speed: 500,
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1,
-        //     autoplay: true,
-        //     autoplaySpeed: 4000,
-        //     cssEase: "linear",
-        //     pauseOnHover: true,
-         
-           
-        // };
-
-        let{noticias}=this.props
-
-    
+        let{noticias}=this.props    
         return (
-            <div style={{display:"flex", alignItems: "center", justifyContent: "center", marginTop: "10px"}}>
+            <div className="div_carrousel" style={{display:"flex", alignItems: "center", justifyContent: "center", marginTop: "5px"}}>
                 <Carousel speed={200} autoplay={true}
                   
                     renderCenterLeftControls={({ previousSlide }) => (
@@ -41,6 +25,7 @@ class Carrousel extends Component {
                     )}
 
                     dragging={true}
+                    
                 >
 
                     {noticias && noticias.length > 0 ?

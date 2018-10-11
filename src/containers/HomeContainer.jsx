@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Row, Col} from 'antd'
 
-
 import CardsPage from '../components/cards/CardsPage';
 import Carrousel from '../components/principalcard/Carrousel';
 import { CarrouselDos } from '../components/cardDetail/CarrouselDos';
