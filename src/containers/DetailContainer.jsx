@@ -24,37 +24,41 @@ const styles={
 }
 class DetailContainer extends Component 
     {
-
         state={
-            detalle_noticia:[]
+            detalle_noticia:this.props.noticias
         }
     
-    componentWillMount () {
-        this.getNoticias()
-    }
+        componentWillMount(){
+            this.getNoticias()
+        }
 
 
-    getNoticias = () => {
-        //const userToken = JSON.parse(localStorage.getItem('userToken'));
-        let url =`${URL}/article/articulofiltro/?slug=${this.props.match.params.slug_noticia}`;
-        var request = new Request(url, {
-            method: 'GET',
-            headers: new Headers({
-                'Content-Type': 'application/json'
-            })
-        });
-        fetch(request)
-            .then(r => r.json())
-            .then(data => {
-                this.setState({ detalle_noticia: data })
-           
-            })
-            .catch(e => {
+        getNoticias=()=>{
+            //const userToken = JSON.parse(localStorage.getItem('userToken'));
+            let url =`${URL}/article/articulofiltro/`;
+            var request = new Request(url, {
+                method: 'GET',
+                headers:new Headers({
+                    'Content-Type': 'application/json'
+                }) 
+            });
+            fetch(request)
+                .then(r => r.json())
+                .then(data => {    
+                    this.setState({detalle_noticia: data})
+                    console.log(this.state.detalle_noticia)
+                })
+                .catch(e => {
+          
+                })
+          }
 
-            })
-    }
-    
-    
+
+    noticiasdetalle=(data)=>(
+            data?
+            <DetailCardDos noticia={data} />  
+            :null
+        )
     noticiasCarrousel=(data)=>(
         data?
          <CarrouselDos noticias={data} />
@@ -71,6 +75,13 @@ class DetailContainer extends Component
 
     render() {             
         let{detalle_noticia}=this.state 
+
+        let detail_noticia = detalle_noticia.find(p=>{
+            return p.slug === this.props.match.params.slug_noticia
+         })
+                  
+        console.log(detail_noticia)    
+
         return (
                 <Layout style={{background:"#ffff"}}>
                 <Header 
@@ -84,19 +95,16 @@ class DetailContainer extends Component
                     <Row gutter={16}>
                     {this.noticiasCarrousel(detalle_noticia)}   
                         <Col lg={17} xl={17} md={17} sm={24} xs={24} style={styles.col}>                        
-                        <DetailCardDos noticia={detalle_noticia} />  
+                        {this.noticiasdetalle(detalle_noticia)} 
                         </Col>
                         <Col lg={7} xl={7} md={7} sm={24} xs={24} >                      
                             <CardComponentDos/>                   
-                            <CardComponentDos/> 
-                            <CardComponentDos/> 
-                            <CardComponentDos/> 
-                            <CardComponentDos/> 
+                            
                         
                         </Col>
                     </Row>
                     <Row gutter={24} justify={"center"} style={styles.col}>
-                    {this.noticiasCardList(detalle_noticia)}    
+                         {this.noticiasCardList(detalle_noticia)}    
                     </Row>
                   
                 </Layout>

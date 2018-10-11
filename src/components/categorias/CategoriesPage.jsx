@@ -57,7 +57,7 @@ class CategoriesPage extends Component {
                 </Row>
                 <Row type="flex" justify="center" align="center">
                     <Col md={24} sm={24} xs={24} style={{ marginBottom: "100px" }}>
-                        <Carrousel noticias={filter_category} />
+                        <Carrousel noticias={noticias} />
                     </Col>
                 </Row>
 
