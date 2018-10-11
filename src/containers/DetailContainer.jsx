@@ -67,7 +67,7 @@ class DetailContainer extends Component
 
     noticiasCardList=(data)=>(
         data?
-            <CardsListDos/>      
+            <CardsListDos noticias={this.state.detalle_noticia} detalle_noticia={data} slug={this.props.match.params.slug_noticia} />      
         :
         null
     )
@@ -95,16 +95,14 @@ class DetailContainer extends Component
                     <Row gutter={16}>
                     {this.noticiasCarrousel(detalle_noticia)}   
                         <Col lg={17} xl={17} md={17} sm={24} xs={24} style={styles.col}>                        
-                        {this.noticiasdetalle(detalle_noticia)} 
+                        {this.noticiasdetalle(detail_noticia)} 
                         </Col>
                         <Col lg={7} xl={7} md={7} sm={24} xs={24} >                      
                             <CardComponentDos/>                   
-                            
-                        
                         </Col>
                     </Row>
                     <Row gutter={24} justify={"center"} style={styles.col}>
-                         {this.noticiasCardList(detalle_noticia)}    
+                         {this.noticiasCardList(detail_noticia)}    
                     </Row>
                   
                 </Layout>

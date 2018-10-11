@@ -19,7 +19,6 @@ class DetailCard extends Component {
     }
     noticiaDetail=()=>{
         let detalle=this.props.noticia
-
         this.setState({noticia: detalle})
         this.setState({categoria:detalle.categoria})
         this.setState({autor:detalle.autor})
