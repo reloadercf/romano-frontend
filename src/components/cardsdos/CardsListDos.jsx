@@ -19,7 +19,7 @@ class CardsListDos extends Component {
                  </div>
                 {mas_noticias &&  mas_noticias.length> 0? 
                     mas_noticias.map((c, key) => (
-                    <Col lg={8} md={8} sm={16} xs={24} key={key}>
+                    <Col lg={8} md={8} sm={16} xs={24} key={key} style={{marginRight:"10px"}}>
                         <CardComponentDos {...c}  slug={slug}/>
                     </Col>
                 )):

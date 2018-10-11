@@ -81,7 +81,7 @@ class App extends Component {
 
     if(!this.state.collapsed)
     {
-      sideDrawer=  <NavMenu  collapsed={collapsed}  />
+      sideDrawer=  <NavMenu  collapsed={collapsed}  toggleClose={this.toggleClose}  />
       bacdrop = <BackDrop click={this.toggleClose}/>
     }
 

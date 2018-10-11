@@ -45,8 +45,6 @@ class NavMenu extends Component {
      
   
     render() {
-        console.log(this.props.collapsed)
-        console.log(this.props.collapsed)
         let {categories}=this.state
         return (
             <div>
@@ -72,9 +70,9 @@ class NavMenu extends Component {
                 <div className ="div-logo" > 
                     <img src={logo} style={style.logo} alt=""/> 
                 </div>
-                <Menu  inlineCollapsed={this.props.collapsed}  theme="light" mode="inline" >
-                                <Menu.Item key="a"  className="mostrar_menu">
-                                    <span className="nav-text"><Link to="/"> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Inicio</Link></span>
+                <Menu  inlineCollapsed={this.props.collapsed} o theme="light" mode="inline" >
+                                <Menu.Item  key="a" className="mostrar_menu" >
+                                    <span className="nav-text"><Link to="/" onClick={this.props.toggleClose}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Inicio</Link></span>
                                 </Menu.Item>
                                 <Menu.Item key="b"  className="mostrar_menu">
                                     <span className="nav-text"><Link to='/directorio'> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Directorio</Link></span>
@@ -83,7 +81,7 @@ class NavMenu extends Component {
                         {categories && categories.length > 0 ?
                             categories.map((c, key) => (
                                 <Menu.Item key={key}>
-                                    <span className="nav-text"><Link to={`/modulo/${c.nombrecategoria}`}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> {c.nombrecategoria}</Link></span>
+                                    <span className="nav-text"><Link to={`/modulo/${c.nombrecategoria}`} onClick={this.props.toggleClose}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> {c.nombrecategoria}</Link></span>
                                 </Menu.Item>
                             )) : null
                         }
