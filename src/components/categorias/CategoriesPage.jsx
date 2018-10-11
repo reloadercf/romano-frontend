@@ -5,6 +5,7 @@ import Carrousel from '../principalcard/Carrousel'
 import CardsPage from '../cards/CardsPage';
 
 import { HeaderCategory } from './HeaderCategory';
+import { CarrouselDos } from '../cardDetail/CarrouselDos';
 
 const URL='https://www.mxplanb.xyz';
 
@@ -12,7 +13,7 @@ class CategoriesPage extends Component {
 
 
     state={
-        noticias:[],
+        noticias:this.props.noticias,
         category:'Fitness'
     }
     componentWillMount(){
@@ -52,11 +53,13 @@ class CategoriesPage extends Component {
             <div>
                  <Row type="flex" justify="center" align="center">
                     <Col md={24} sm={24} xs={24} style={{ marginBottom: "20px" }}>
+               
                        <HeaderCategory category_name={this.props.match.params.modulo_name}/>
                     </Col>
                 </Row>
                 <Row type="flex" justify="center" align="center">
                     <Col md={24} sm={24} xs={24} style={{ marginBottom: "100px" }}>
+                        <CarrouselDos noticias={noticias} />
                         <Carrousel noticias={noticias} />
                     </Col>
                 </Row>

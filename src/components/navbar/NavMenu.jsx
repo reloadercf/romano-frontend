@@ -75,7 +75,7 @@ class NavMenu extends Component {
                                     <span className="nav-text"><Link to="/" onClick={this.props.toggleClose}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Inicio</Link></span>
                                 </Menu.Item>
                                 <Menu.Item key="b"  className="mostrar_menu">
-                                    <span className="nav-text"><Link to='/directorio'> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Directorio</Link></span>
+                                    <span className="nav-text"><Link to='/directorio'onClick={this.props.toggleClose}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Directorio</Link></span>
                                 </Menu.Item>
                        
                         {categories && categories.length > 0 ?
