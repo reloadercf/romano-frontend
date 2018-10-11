@@ -11,7 +11,9 @@ export class CarrouselDos extends Component {
        
        
           let{noticias}=this.props
-
+          let destacados = noticias.filter(p=>{
+            return p.destacado === true
+             })
         return (
             <div className="mostrar_carrousel">
             <Carousel speed={200} autoplay={true} slidesToShow={5} slidesToScroll={1}  dragging={true}   
@@ -25,8 +27,8 @@ export class CarrouselDos extends Component {
             )}
 
             >
-            {noticias &&  noticias.length> 0? 
-              noticias.map((c, key)=>(
+            {destacados &&  destacados.length> 0? 
+              destacados.map((c, key)=>(
                <div key={key} >
                    <CardCarrousel  {...c} />              
                </div>

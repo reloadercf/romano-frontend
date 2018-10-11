@@ -62,7 +62,7 @@
       align-items: flex-start;
     }
    
-    .menu_header .menu .mostrar_menu{
+    .menu_header .mostrar_menu{
       display: none;
     }
     
@@ -101,7 +101,7 @@
       align-items: flex-start;
     }
    
-    .menu_header .menu .mostrar_menu{
+    .menu_header  .mostrar_menu{
       display: none;
     }
     

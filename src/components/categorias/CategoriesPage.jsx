@@ -41,19 +41,16 @@ class CategoriesPage extends Component {
 
         render() {
             let {noticias}=this.state
-            console.log(this.state.noticias)
-         
             let filter_category = noticias.filter(p=>{
                     return p.categoria.nombrecategoria === this.props.match.params.modulo_name
             })
-         console.log(filter_category)    
+            
 
 
         return (
             <div>
                  <Row type="flex" justify="center" align="center">
                     <Col md={24} sm={24} xs={24} style={{ marginBottom: "20px" }}>
-               
                        <HeaderCategory category_name={this.props.match.params.modulo_name}/>
                     </Col>
                 </Row>

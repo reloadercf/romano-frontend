@@ -48,9 +48,6 @@ class App extends Component {
       })
 }
 
-
-
-
   toggleCollapsed = () => {
     this.setState((prevState)=>{
       return {collapsed:!prevState.collapsed}

@@ -12,7 +12,12 @@ class Carrousel extends Component {
 
     render() {
 
-        let{noticias}=this.props    
+        let{noticias}=this.props
+        
+        let destacados = noticias.filter(p=>{
+            return p.destacado === true
+    })
+    
         return (
             <div className="div_carrousel" style={{display:"flex", alignItems: "center", justifyContent: "center", marginTop: "5px"}}>
                 <Carousel speed={200} autoplay={true}
@@ -28,8 +33,8 @@ class Carrousel extends Component {
                     
                 >
 
-                    {noticias && noticias.length > 0 ?
-                        noticias.map((c, key) => (
+                    {destacados && destacados.length > 0 ?
+                        destacados.map((c, key) => (
                             <CardCarrousel {...c} key={key}  />
                         ))
                         : null
