@@ -4,7 +4,7 @@
     background: #3a4750;
     display: flex;
     justify-content: center;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 .div_title_detail h3{
@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 250px;
     margin-bottom: 3em;
     margin-top: 2em;
@@ -34,13 +34,25 @@
 
 .card_dos_text {
     text-align: center;
-    padding: 0.4em;
 }
-.card_dos_text h1{
-    font-size: 16px;
+.card_dos_text h3{
+    font-size: 10px;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
+    transition: 0.5s;
+    color: black;
+    padding: 1em;
+}
+
+.card_dos_text h3:hover{
+    font-size: 11px;
+    background: black;
+    color: #ffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1.5em;
 }
 
 .card_dos_text span{

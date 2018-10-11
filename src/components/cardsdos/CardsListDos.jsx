@@ -13,7 +13,7 @@ class CardsListDos extends Component {
                   
         console.log(mas_noticias)    
         return (
-            <div >
+            <div>
                  <div className="div_title_detail">
                      <h3> Mas Sobre {detalle_noticia.categoria.nombrecategoria}</h3>
                  </div>

@@ -9,7 +9,7 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
     return (
         <Row className="recipe-card">
 
-            <Col md={10} sm={24} xs={24}>
+            <Col md={12} sm={24} xs={24}>
             <Link to={`/detail/${slug}`}> 
                 <div className="div-img hidden">
                     <img className="img" src={imagenportada} alt={titulo}/>
@@ -17,7 +17,7 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
             </Link>
            
             </Col>
-            <Col md={14} sm={24} xs={24}>
+            <Col md={12} sm={24} xs={24}>
                 <article>
                     <div className="div-category">
                         <span>{categoria.nombrecategoria}</span>
@@ -34,7 +34,7 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
                     <p>
                         {textoprevio}                     
                     </p>  
-                    <span>Por: Autor {autor.nombre}</span>  
+                    <span>Por:{autor.nombre}</span>  
 
 
                     {/* <ul>

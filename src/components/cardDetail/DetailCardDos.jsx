@@ -15,11 +15,7 @@ const DetailCardDos =({noticia})=>{
                     </div>
                         
                     </Col>
-                    <Col md={24}>
-                        <span className="detail_subtitle">
-                            {noticia.textograndecuerpo}
-                        </span>
-                    </Col>
+                
                     <Col md={24}>
                         <span className="detail_categoria">
                             {noticia.categoria.nombrecategoria}
@@ -84,6 +80,11 @@ const DetailCardDos =({noticia})=>{
             <Col lg={24} md={24} xs={24} className="detail-img1">
                 <img src={noticia.imagenportada} alt=""/>
             </Col>
+                <Col md={24}>
+                    <span className="detail_subtitle">
+                        <strong>{noticia.textograndecuerpo}</strong>
+                    </span>
+                </Col>
             <Col lg={24} md={24} xs={24}>
                <div className="detail_descripcion_uno" >
                    <p> {noticia.cuerpo}</p>

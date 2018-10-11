@@ -23,6 +23,7 @@
   .bottomleft {
     position: absolute;
     bottom: 3em;
+    left: 100px;
     font-size: 30px;
     color: #222831;
     background: white;
