@@ -11,7 +11,7 @@ class CardsListTres extends Component {
             return p.categoria.nombrecategoria === detalle_noticia.categoria.nombrecategoria
          })
                   
-        console.log(mas_noticias)    
+  
         return (
             <div >
                 {mas_noticias &&  mas_noticias.length> 0? 

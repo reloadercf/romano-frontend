@@ -22,7 +22,6 @@ class DetailCard extends Component {
         this.setState({noticia: detalle})
         this.setState({categoria:detalle.categoria})
         this.setState({autor:detalle.autor})
-            console.log(detalle) 
         }
 
 

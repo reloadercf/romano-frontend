@@ -11,7 +11,7 @@ const DetailCardDos =({noticia})=>{
                 <Row>
                     <Col md={24}>
                     <div className="container_detail_title">
-                        <h1 className="detail_title">{noticia.titulo}</h1>
+                        <h3 className="detail_title">{noticia.titulo}</h3>
                     </div>
                         
                     </Col>

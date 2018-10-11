@@ -19,7 +19,7 @@ font-family: 'Merriweather', serif; */
   justify-content: space-around;
   align-items: center;
   font-size: 14px;
-  color:#52616b;
+  color:#000000;
   opacity: .5;
   margin: 5px 0px 5px 0px;
   letter-spacing: 3px;
@@ -112,7 +112,7 @@ font-family: 'Merriweather', serif; */
   margin: 20px 0px 20px 0px;
   line-height: 0.9;
   font-size: 2em;
-  color: #4d606e;
+  color: #000000;
 
 }
 

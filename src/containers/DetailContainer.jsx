@@ -48,7 +48,7 @@ class DetailContainer extends Component
                 .then(r => r.json())
                 .then(data => {    
                     this.setState({detalle_noticia: data})
-                    console.log(this.state.detalle_noticia)
+                   
                 })
                 .catch(e => {
           
@@ -88,7 +88,7 @@ class DetailContainer extends Component
             return p.slug === this.props.match.params.slug_noticia
          })
                   
-        console.log(detail_noticia)    
+     
 
         return (
                 <Layout style={{background:"#ffff"}}>

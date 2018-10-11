@@ -72,16 +72,16 @@ class NavMenu extends Component {
                 </div>
                 <Menu  inlineCollapsed={this.props.collapsed} o theme="light" mode="inline" >
                                 <Menu.Item  key="a" className="mostrar_menu" >
-                                    <span className="nav-text"><Link to="/" onClick={this.props.toggleClose}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Inicio</Link></span>
+                                    <span className="nav-text"><Link to="/" onClick={this.props.toggleClose}> <Icon type="check-circle"  /> Inicio</Link></span>
                                 </Menu.Item>
                                 <Menu.Item key="b"  className="mostrar_menu">
-                                    <span className="nav-text"><Link to='/directorio'onClick={this.props.toggleClose}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> Directorio</Link></span>
+                                    <span className="nav-text"><Link to='/directorio'onClick={this.props.toggleClose}> <Icon type="check-circle"  /> Directorio</Link></span>
                                 </Menu.Item>
                        
                         {categories && categories.length > 0 ?
                             categories.map((c, key) => (
                                 <Menu.Item key={key}>
-                                    <span className="nav-text"><Link to={`/modulo/${c.nombrecategoria}`} onClick={this.props.toggleClose}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> {c.nombrecategoria}</Link></span>
+                                    <span className="nav-text"><Link to={`/modulo/${c.nombrecategoria}`} onClick={this.props.toggleClose}> <Icon type="check-circle"  /> {c.nombrecategoria}</Link></span>
                                 </Menu.Item>
                             )) : null
                         }

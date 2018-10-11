@@ -11,7 +11,7 @@ class CardsListDos extends Component {
             return p.categoria.nombrecategoria === detalle_noticia.categoria.nombrecategoria
          })
                   
-        console.log(mas_noticias)    
+  
         return (
             <div>
                  <div className="div_title_detail">
