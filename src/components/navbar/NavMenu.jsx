@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 import {Layout, Menu, Icon} from 'antd';
 import logo from './logo.png';
 import './navbar.css'
-import {connect} from 'react-redux'
-import {categories} from '../../actions'
-import {bindActionCreators} from 'redux'
+import {Link} from 'react-router-dom'
 
 
 const {Sider} = Layout;
 //const SubMenu = Menu.SubMenu;
+const URL='https://www.mxplanb.xyz';
 
 const style = {
     logo: {
@@ -19,18 +18,36 @@ const style = {
 class NavMenu extends Component {
     state = {
         collapsed: false,
+        categories:[]
       }
     
     componentWillMount(){
-        this.props.categories();
+        this.getcategories();
     }
 
- 
+    getcategories=()=>{
+        let url =`${URL}/article/categorias/`;
+        var request = new Request(url, {
+            method: 'GET',
+            headers:new Headers({
+                'Content-Type': 'application/json'
+            }) 
+        });
+        fetch(request)
+            .then(r => r.json())
+            .then(data => {    
+                this.setState({categories: data})
+            })
+            .catch(e => {
+      
+            })
+   }
      
   
     render() {
         console.log(this.props.collapsed)
-        let categorias=this.props.noticias.categoriesData
+        console.log(this.props.collapsed)
+        let {categories}=this.state
         return (
             <div>
             <Sider
@@ -58,10 +75,10 @@ class NavMenu extends Component {
                 <Menu  inlineCollapsed={this.props.collapsed}  theme="light" mode="inline" >
                 
                  
-                        {categorias && categorias.length > 0 ?
-                            categorias.map((c, key) => (
+                        {categories && categories.length > 0 ?
+                            categories.map((c, key) => (
                                 <Menu.Item key={key}>
-                                    <span className="nav-text"><a href={`/modulo/${c.nombrecategoria}`}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> {c.nombrecategoria}</a></span>
+                                    <span className="nav-text"><Link to={`/modulo/${c.nombrecategoria}`}> <Icon type="check-circle" theme="twoTone" twoToneColor="#212121" /> {c.nombrecategoria}</Link></span>
                                 </Menu.Item>
                             )) : null
                         }
@@ -79,14 +96,5 @@ class NavMenu extends Component {
     }
 }
 
-function mapStateToProps(state){
-    return{
-        noticias:state.noticias
-    }
-}
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({categories}, dispatch)
-   
-}
-export default connect(mapStateToProps,mapDispatchToProps)(NavMenu);
+export default NavMenu;
 

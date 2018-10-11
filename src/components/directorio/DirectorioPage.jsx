@@ -2,24 +2,41 @@ import React, { Component } from 'react';
 import {Row, Col, Input, Icon} from 'antd'
 import './directorio.css'
 import { DirectorioCard } from './DirectorioCard';
-
-
-import {connect} from 'react-redux'
-import {directoriosall} from '../../actions'
-import {bindActionCreators} from 'redux'
-
-
 const Search = Input.Search;
+const URL='https://www.mxplanb.xyz';
 
 class DirectorioPage extends Component {
 
-    componentWillMount(){
-        this.props.directoriosall();
+
+    state={
+        directorios:[]
     }
 
+    componentWillMount(){
+        this.getDirectorios()
+    }
+
+    getDirectorios=()=>{
+        let url =`${URL}/article/directorio/`
+        var request = new Request(url, {
+            method: 'GET',
+            headers:new Headers({
+                'Content-Type': 'application/json'
+            }) 
+        });
+        fetch(request)
+            .then(r => r.json())
+            .then(data => {    
+                this.setState({directorios: data})
+                
+            })
+            .catch(e => {
+      
+            })
+      }
+
     render() {
-        let directorios=this.props.noticias.directories
-        console.log(directorios)
+        let {directorios}=this.state
         return (
             <div>
                 <div className="header_directorio">
@@ -90,13 +107,5 @@ class DirectorioPage extends Component {
         );
     }
 }
-function mapStateToProps(state){
-    return{
-        noticias:state.noticias
-    }
-}
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({directoriosall}, dispatch)
-   
-}
-export default connect(mapStateToProps,mapDispatchToProps)(DirectorioPage);
+
+export default DirectorioPage;

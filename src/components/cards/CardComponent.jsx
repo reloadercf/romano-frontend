@@ -1,9 +1,9 @@
 import React from 'react'
 import {Row, Col} from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faTwitterSquare, faFacebookSquare, faInstagram, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
 import {Link} from 'react-router-dom';
-import  {FacebookShareButton} from 'react-share'
+//import  {FacebookShareButton} from 'react-share'
 
 export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportada, cuerpo, categoria,fechainicio,autor}) => {
     return (
@@ -24,9 +24,9 @@ export const CardComponent = ({slug, titulo, textoprevio, subtitle, imagenportad
                         <span>{fechainicio}</span>
                     </div>
 
-                    <a href={`/detail/${slug}`}> 
+                    <Link to={`/detail/${slug}`}> 
                         <h2>{titulo}</h2>
-                    </a>
+                    </Link>
 
                     <h3>{subtitle}</h3>
                     <hr style={{opacity:"0.3"}}/>

@@ -15,7 +15,7 @@ export function renderRegion(){
 }
 
 export function noticiasListAll(){
-    const request=axios.get(`${URL}/article/articulofiltro/`)
+    const request=axios.get(`${URL}/article/articulofiltro/`) 
                             .then(response=>response.data)
     return {
         type:'GET_NOTICIAS_ALL',

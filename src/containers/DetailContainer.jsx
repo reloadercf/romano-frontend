@@ -4,13 +4,13 @@ import {Layout} from 'antd';
 import DetailCard from '../components/cardDetail/DetailCard'
 import {CarrouselDos} from '../components/cardDetail/CarrouselDos';
 import CardsListDos from '../components/cardsdos/CardsListDos';
-import {connect} from 'react-redux'
-import {noticiaDetail,noticiasListAll } from '../actions'
-import {bindActionCreators} from 'redux'
+
 import { CardComponentDos } from '../components/cardsdos/CardComponentDos';
+import DetailCardDos from '../components/cardDetail/DetailCardDos';
 
 
 const {Header} = Layout;
+const URL='https://www.mxplanb.xyz';
 
 const styles={
     row:{
@@ -25,33 +25,52 @@ const styles={
 class DetailContainer extends Component 
     {
 
-  
-    componentWillMount(){
-        this.props.noticiasListAll();
-        this.props.noticiaDetail(this.props.match.params.slug_noticia)
+        state={
+            detalle_noticia:[]
+        }
+    
+    componentWillMount () {
+        this.getNoticias()
     }
 
-    noticiasTemplate=(data)=>(
-        data.noticiasData?
-         <DetailCard noticias={data.noticiasData}  /> 
-        :
-        null
-    )
 
+    getNoticias = () => {
+        //const userToken = JSON.parse(localStorage.getItem('userToken'));
+        let url =`${URL}/article/articulofiltro/?slug=${this.props.match.params.slug_noticia}`;
+        var request = new Request(url, {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json'
+            })
+        });
+        fetch(request)
+            .then(r => r.json())
+            .then(data => {
+                this.setState({ detalle_noticia: data })
+           
+            })
+            .catch(e => {
+
+            })
+    }
+    
+    
     noticiasCarrousel=(data)=>(
-        data.noticiasList?
-         <CarrouselDos noticias={data.noticiasList} />
+        data?
+         <CarrouselDos noticias={data} />
         :null
     )
 
     noticiasCardList=(data)=>(
-        data.noticiasData?
+        data?
             <CardsListDos/>      
         :
         null
     )
 
-    render() {        
+
+    render() {             
+        let{detalle_noticia}=this.state 
         return (
                 <Layout style={{background:"#ffff"}}>
                 <Header 
@@ -63,9 +82,9 @@ class DetailContainer extends Component
               
                 </Header>
                     <Row gutter={16}>
-                    {this.noticiasCarrousel(this.props.noticias)}   
+                    {this.noticiasCarrousel(detalle_noticia)}   
                         <Col lg={17} xl={17} md={17} sm={24} xs={24} style={styles.col}>                        
-                         {this.noticiasTemplate(this.props.noticias)}        
+                        <DetailCardDos noticia={detalle_noticia} />  
                         </Col>
                         <Col lg={7} xl={7} md={7} sm={24} xs={24} >                      
                             <CardComponentDos/>                   
@@ -77,7 +96,7 @@ class DetailContainer extends Component
                         </Col>
                     </Row>
                     <Row gutter={24} justify={"center"} style={styles.col}>
-                        <CardsListDos/>  
+                    {this.noticiasCardList(detalle_noticia)}    
                     </Row>
                   
                 </Layout>
@@ -86,14 +105,6 @@ class DetailContainer extends Component
         ); 
     }
 }
-function mapStateToProps(state){
-    return{
-        noticias:state.noticias
-    }
-}
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({noticiaDetail,noticiasListAll}, dispatch)
-   
-}
-export default connect(mapStateToProps,mapDispatchToProps)(DetailContainer);
+
+export default DetailContainer;
 

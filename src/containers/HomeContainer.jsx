@@ -6,44 +6,27 @@ import CardsPage from '../components/cards/CardsPage';
 import Carrousel from '../components/principalcard/Carrousel';
 import { CarrouselDos } from '../components/cardDetail/CarrouselDos';
 
-import {connect} from 'react-redux'
-import {noticiasListAll} from '../actions'
-import {bindActionCreators} from 'redux'
-
 
 class HomeContainer extends Component {
 
-    componentWillMount(){
-        this.props.noticiasListAll();
-    }
- 
-
     render() {
+         let{noticias}=this.props
         return (
             <div>
                             
                  <Row type="flex" justify="center" align="center">
                     <Col md={24} sm={24} xs={24} style={{marginBottom: "100px", marginTop:"100px"}}>
-                        <CarrouselDos noticias={this.props.noticias.noticiasList} />
-                        
-                        <Carrousel  noticias={this.props.noticias.noticiasList} />
+                        <CarrouselDos noticias={noticias} />
+                        <Carrousel  noticias={noticias} />
                     </Col>
                 </Row>
 
-                <CardsPage noticias={this.props.noticias.noticiasList} />
+                <CardsPage noticias={noticias} />
             </div>
         );
     }
 }
 
- function mapStateToProps(state){
-     return{
-         noticias:state.noticias
-     }
- }
- function mapDispatchToProps(dispatch){
-     return bindActionCreators({noticiasListAll}, dispatch)
-    
- }
-export default connect(mapStateToProps,mapDispatchToProps)(HomeContainer);
+
+export default HomeContainer;
 

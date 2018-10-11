@@ -5,36 +5,51 @@ import NavMenu from './components/navbar/NavMenu';
 import Routes from './Routes';
 import { HeaderSection } from './components/header/HeaderSection';
 import { FooterSection } from './components/footer/FooterSection';
-
-
-import {connect} from 'react-redux'
-import {noticiasListAll} from './actions'
-import {bindActionCreators} from 'redux'
 import { BackDrop } from './components/header/BackDrop';
 
 
 
-
 const {Content} = Layout;
-
-
+const URL='https://www.mxplanb.xyz';
 class App extends Component {
 
-  
+
   state = {
     current: 'a',
-    noticias:null,
+    noticias:[],
     collapsed: true,
     region:{}
     
+    
+  }
+  componentWillMount(){
+    this.getNoticias()
   }
 
-  componentWillMount()
-  {
-    
-    this.props.noticiasListAll();
-  
-  }
+
+
+  getNoticias=()=>{
+  //const userToken = JSON.parse(localStorage.getItem('userToken'));
+  let url =`${URL}/article/articulofiltro/`;
+  var request = new Request(url, {
+      method: 'GET',
+      headers:new Headers({
+          'Content-Type': 'application/json'
+      }) 
+  });
+  fetch(request)
+      .then(r => r.json())
+      .then(data => {    
+          this.setState({noticias: data})
+          console.log(this.state.noticias)
+      })
+      .catch(e => {
+
+      })
+}
+
+
+
 
   toggleCollapsed = () => {
     this.setState((prevState)=>{
@@ -60,7 +75,7 @@ class App extends Component {
 
   render() {
    
-    let{current, collapsed}=this.state
+    let{current, collapsed, noticias}=this.state
     let sideDrawer;
     let bacdrop;
 
@@ -73,12 +88,12 @@ class App extends Component {
     return (
       <div>
 
-        <HeaderSection  current={current} handleClick={this.handleClick} region={this.props.noticias.noticiasList} collapsed={collapsed} toggleCollapsed={this.toggleCollapsed} />
+        <HeaderSection  current={current} handleClick={this.handleClick}  collapsed={collapsed} toggleCollapsed={this.toggleCollapsed} />
         {sideDrawer}
         {bacdrop}
         <Layout className="layout-videos">
           <Content className="content" >
-            <Routes />
+            <Routes noticias={noticias} />
           </Content>
         </Layout>
         <FooterSection />
@@ -88,16 +103,8 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(state){
-  return{
-      noticias:state.noticias
-  }
-}
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({noticiasListAll}, dispatch)
- 
-}
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+
+export default App;
 
 
 
