@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Layout, Menu, Icon} from 'antd';
 import logo from './logo.png';
 import './navbar.css'
@@ -6,8 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 const {Sider} = Layout;
-//const SubMenu = Menu.SubMenu;
-const URL='https://www.mxplanb.xyz';
+
 
 const style = {
     logo: {
@@ -15,37 +14,9 @@ const style = {
         height: "80px"
     }
 }
-class NavMenu extends Component {
-    state = {
-        collapsed: false,
-        categories:[]
-      }
-    
-    componentWillMount(){
-        this.getcategories();
-    }
+const NavMenu=({categories, collapsed,toggleClose})=>  {
 
-    getcategories=()=>{
-        let url =`${URL}/article/categorias/`;
-        var request = new Request(url, {
-            method: 'GET',
-            headers:new Headers({
-                'Content-Type': 'application/json'
-            }) 
-        });
-        fetch(request)
-            .then(r => r.json())
-            .then(data => {    
-                this.setState({categories: data})
-            })
-            .catch(e => {
-      
-            })
-   }
-     
-  
-    render() {
-        let {categories}=this.state
+       
         return (
             <div>
             <Sider
@@ -53,7 +24,7 @@ class NavMenu extends Component {
                 collapsedWidth="0"
                 trigger={null}
                 collapsible
-                collapsed={this.props.collapsed}
+                collapsed={collapsed}
                 style={{
                 width:"300px",
                 position: 'fixed',
@@ -62,42 +33,37 @@ class NavMenu extends Component {
                 left:"0",
                 boxShadow: "2px 0px 5px rgba(0,0,0,0.5)",
                 backgroundColor:"#ffff",
-                zIndex: 200
-                
-                    
+                zIndex: 200         
             }}>
 
                 <div className ="div-logo" > 
                     <img src={logo} style={style.logo} alt=""/> 
                 </div>
-                <Menu  inlineCollapsed={this.props.collapsed} o theme="light" mode="inline" >
+                <Menu  inlineCollapsed={collapsed} o theme="light" mode="inline" >
                                 <Menu.Item  key="a" className="mostrar_menu" >
-                                    <span className="nav-text"><Link to="/" onClick={this.props.toggleClose}> <Icon type="check-circle"  /> Inicio</Link></span>
+                                    <span className="nav-text"><Link to="/" onClick={toggleClose}> <Icon type="check-circle"  /> Inicio</Link></span>
                                 </Menu.Item>
                                 <Menu.Item key="b"  className="mostrar_menu">
-                                    <span className="nav-text"><Link to='/directorio'onClick={this.props.toggleClose}> <Icon type="check-circle"  /> Directorio</Link></span>
+                                    <span className="nav-text"><Link to='/directorio'onClick={toggleClose}> <Icon type="check-circle"  /> Directorio</Link></span>
                                 </Menu.Item>
                        
                         {categories && categories.length > 0 ?
                             categories.map((c, key) => (
                                 <Menu.Item key={key}>
-                                    <span className="nav-text"><Link to={`/modulo/${c.nombrecategoria}`} onClick={this.props.toggleClose}> <Icon type="check-circle"  /> {c.nombrecategoria}</Link></span>
+                                    <span className="nav-text"><Link to={`/modulo/${c.nombrecategoria}`} onClick={toggleClose}> <Icon type="check-circle"  /> {c.nombrecategoria}</Link></span>
                                 </Menu.Item>
                             )) : null
                         }
 
                 </Menu>
                 
-            </Sider>
-
-
-                
+            </Sider>  
 
             </div>
            
         );
     }
-}
+
 
 export default NavMenu;
 

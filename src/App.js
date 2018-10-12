@@ -18,6 +18,7 @@ class App extends Component {
   state = {
     current: 'a',
     noticias:[],
+    categories:[],
     collapsed: true,
     region:{}
     
@@ -25,9 +26,26 @@ class App extends Component {
   }
   componentWillMount(){
     this.getNoticias()
+    this.getcategories();
+    
   }
-
-
+  getcategories=()=>{
+    let url =`${URL}/article/categorias/`;
+    var request = new Request(url, {
+        method: 'GET',
+        headers:new Headers({
+            'Content-Type': 'application/json'
+        }) 
+    });
+    fetch(request)
+        .then(r => r.json())
+        .then(data => {    
+            this.setState({categories: data})
+        })
+        .catch(e => {
+  
+        })
+}
 
   getNoticias=()=>{
   //const userToken = JSON.parse(localStorage.getItem('userToken'));
@@ -53,9 +71,8 @@ class App extends Component {
     this.setState((prevState)=>{
       return {collapsed:!prevState.collapsed}
     })
-      
-    
   }
+
 
   toggleClose = () => {
   this.setState({collapsed:true})
@@ -73,13 +90,13 @@ class App extends Component {
 
   render() {
    
-    let{current, collapsed, noticias}=this.state
+    let{current, collapsed, noticias,categories}=this.state
     let sideDrawer;
     let bacdrop;
 
     if(!this.state.collapsed)
     {
-      sideDrawer=  <NavMenu  collapsed={collapsed}  toggleClose={this.toggleClose}  />
+      sideDrawer=  <NavMenu  collapsed={collapsed}  toggleClose={this.toggleClose} categories={categories} />
       bacdrop = <BackDrop click={this.toggleClose}/>
     }
 
