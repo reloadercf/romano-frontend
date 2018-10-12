@@ -6,7 +6,7 @@ import Routes from './Routes';
 import { HeaderSection } from './components/header/HeaderSection';
 import { FooterSection } from './components/footer/FooterSection';
 import { BackDrop } from './components/header/BackDrop';
-import { SharePage } from './components/header/SharePage';
+//import { SharePage } from './components/header/SharePage';
 
 
 
@@ -94,7 +94,7 @@ class App extends Component {
             <Routes noticias={noticias} />
           </Content>
         </Layout>
-        <SharePage/>
+        {/* <SharePage/> */}
         <FooterSection />
       </div>
       

@@ -3,8 +3,7 @@ font-family: 'Merriweather', serif; */
 .recipe-card img {
   max-width: 100%;
   height: auto;
-  -webkit-filter: blur(2px);
-  filter: blur(0.5px);
+
 }
 
 .recipe-card {

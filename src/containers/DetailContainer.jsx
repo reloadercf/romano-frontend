@@ -69,14 +69,14 @@ class DetailContainer extends Component
 
     noticiasCardList=(data)=>(
         data?
-            <CardsListTres noticias={this.state.detalle_noticia} detalle_noticia={data} slug={this.props.match.params.slug_noticia} />      
+            <CardsListTres noticias={this.state.detalle_noticia} detalle_noticia={data}/>      
         :
         null
     )
 
     noticiasCardListDos=(data)=>(
         data?
-            <CardsListDos noticias={this.state.detalle_noticia} detalle_noticia={data} slug={this.props.match.params.slug_noticia} />      
+            <CardsListDos noticias={this.state.detalle_noticia} detalle_noticia={data} />      
         :
         null
     )
