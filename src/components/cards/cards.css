@@ -294,6 +294,18 @@ font-family: 'Merriweather', serif; */
     text-align: center;
     color: #222222;
   }
+  .recipe-card article h2:hover {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin: 20px 0px 20px 0px;
+    line-height: 0.9;
+    font-size: 1em;
+    color: #000000;
+  
+  }
+  
+
   .recipe-card article h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;

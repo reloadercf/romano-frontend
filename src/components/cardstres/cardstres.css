@@ -9,8 +9,12 @@
     margin-bottom: 1em;
     margin-top: 2em;
     padding: 0;
+    transition: .5s;
 }
 
+.card_component_tres:hover{
+   opacity: .8;
+}
 .div_img_comp_tres{
   display: flex;
   justify-content: center;

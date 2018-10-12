@@ -6,6 +6,13 @@
     position: relative;
     height: auto;
     text-align: center;
+    transition: 0.5s;
+  }
+  .container-card:hover {
+    position: relative;
+    height: auto;
+    text-align: center;
+    opacity: .9;
     
   }
 
@@ -158,10 +165,10 @@
   }
 
   .info-container-card span {
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 600;
+    text-transform: uppercase;
     padding: 5px;
-    border-right: 8px 
   }
 
 
@@ -250,24 +257,24 @@
   
     }
     
-    .detail_title{
+    .container_detail_title .detail_title{
       font-size: 16px;
       letter-spacing: 3px;
       text-transform: uppercase;
       padding: 3px;
-      background: #838689;
+      background: black;
       color:#f6f6f6;
       width: 100%; 
       transition: 0.3s; 
     }
   
-    .detail_title:hover{
-      font-size: 14px;
+    .container_detail_title  .detail_title:hover{
+      font-size: 16px;
       letter-spacing: 3px;
       text-transform: uppercase;
       padding: 3px;
-      background: #303841;
-      color:#f6f6f6;
+      background: #ffff;
+      color:black;
       width: 100%; 
       transition: 0.5s; 
     }

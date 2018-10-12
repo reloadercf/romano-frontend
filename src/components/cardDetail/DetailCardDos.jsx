@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col,  Card} from 'antd'
 import {Icon, Button} from 'antd'
+const ReactMarkdown = require('react-markdown/with-html')
 
 const DetailCardDos =({noticia})=>{
     
@@ -87,8 +88,11 @@ const DetailCardDos =({noticia})=>{
                 </Col>
             <Col lg={24} md={24} xs={24}>
                <div className="detail_descripcion_uno" >
-                   <p> {noticia.cuerpo}</p>
-               </div>                   
+                   {/* <p> {noticia.cuerpo}</p> */}
+                   <ReactMarkdown source={noticia.cuerpo}  escapeHtml={false} />
+               </div>   
+
+
             </Col>
         </Row>
 
