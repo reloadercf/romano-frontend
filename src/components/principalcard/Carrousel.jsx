@@ -20,7 +20,7 @@ class Carrousel extends Component {
     
         return (
             <div className="div_carrousel" style={{display:"flex", alignItems: "center", justifyContent: "center", marginTop: "5px"}}>
-                <Carousel speed={200} autoplay={true}
+                <Carousel speed={200} autoplay={true} wrapAround={true}
                   
                     renderCenterLeftControls={({ previousSlide }) => (
                         <button onClick={previousSlide} style={{ background: "#323232", padding: "5px" }}> <Icon type="left" theme="outlined" style={{ fontSize: '30px', color: '#ffff' }} /> </button>
@@ -32,7 +32,6 @@ class Carrousel extends Component {
                     dragging={true}
                     
                 >
-
                     {destacados && destacados.length > 0 ?
                         destacados.map((c, key) => (
                             <CardCarrousel {...c} key={key}  />

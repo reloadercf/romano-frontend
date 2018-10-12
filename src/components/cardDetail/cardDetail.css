@@ -203,6 +203,60 @@
   }
 
 
+
+  .card_autor{
+     margin-bottom: 3em;
+     padding: 10px;
+     border-radius: 10px;
+     box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5);
+     
+  }
+
+  .card_autor .card_autor_image{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+  }
+  .card_autor .card_autor_image img{
+    width: 50%;
+    border-radius: 50%;
+  }
+
+.card_autor .card_autor_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid black;
+    padding: 10px;
+    color: black;
+}
+.card_autor .card_autor_info h4{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.card_autor .card_autor_info span{
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.card_autor .card_autor_info p{
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.card_autor_info_social{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card_autor_info_social .icon_style{
+   color: #000000;
+   margin-right: 10px;
+}
+
+
   @media only screen and (max-width: 980px) and (min-width: 821px) {}
 
   /* Para 800px */
@@ -306,6 +360,58 @@
       font-family: 'Lato', sans-serif;
       word-wrap: break-word;
     }
+
+
+  .card_autor{
+    margin-bottom: 3em;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.5);
+    
+ }
+
+ .card_autor .card_autor_image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+ .card_autor .card_autor_image img{
+   width: 50%;
+   border-radius: 50%;
+ }
+
+.card_autor .card_autor_info{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 10px;
+   color: black;
+}
+.card_autor .card_autor_info h4{
+ font-size: 14px;
+ letter-spacing: 1px;
+}
+.card_autor .card_autor_info span{
+ font-size: 12px;
+ letter-spacing: 1px;
+}
+.card_autor .card_autor_info p{
+ margin-top: 10px;
+ font-size: 10px;
+ letter-spacing: 1px;
+ text-align: justify;
+}
+.card_autor_info_social{
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+
+.card_autor_info_social .icon_style{
+  color: #000000;
+  margin-right: 10px;
+}
    
   }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col,  Card} from 'antd'
 import {Icon, Button} from 'antd'
+import { DetailAutor } from './DetailAutor';
 const ReactMarkdown = require('react-markdown/with-html')
 
 const DetailCardDos =({noticia})=>{
@@ -94,7 +95,12 @@ const DetailCardDos =({noticia})=>{
 
 
             </Col>
+            <Col lg={24} md={24} xs={24}>
+              <DetailAutor autor={noticia.autor}/>
+            </Col>
         </Row>
+
+        
 
 
         <Row gutter={8} style={{textAlign:"center"}}>
